@@ -11,7 +11,7 @@
             <img class="header__logo" src="https://www.pngarts.com/files/3/Cute-Cat-PNG-Photo.png" width="154" height="64" alt="Логотип магазина «Глейси»">
           </a>
         <ul class="header__menu">
-          <li><a href="catalog.html">Каталог</a> 
+          <li><a href="catalog.html">Каталог</a>
           <ul class="inner__menu">
             <li>Новинки</li>
             <li class="divider"></li>
@@ -64,7 +64,34 @@
       </ul>
       <h1 class="catalog__current">Сливочное мороженое</h1>
       <form>
-        <!-- Здесь будет форма сортировки и фильтрации -->
+        <div class="form-group">
+          <label for="sort_type">Сортировка:</label>
+        <select name="sort_type" id="sort_type">
+          <option>по популярности</option>
+          <option>сначала недорогие</option>
+          <option>сначала дорогие</option>
+          <option>по жирности</option>
+        </select>
+      </div>
+      <div class="form-group">
+          <label>Цена: 100 руб. – 500 руб.</label>
+      </div>
+      <div class="form-group">
+          <label>Жирность:</label>
+          <label><input type="radio" name="fat"> 0%</label>
+          <label><input type="radio" name="fat"> до 10%</label>
+          <label><input type="radio" name="fat"> до 30%</label>
+          <label><input type="radio" name="fat"> выше 30%</label>
+      </div>
+      <div class="form-group">
+          <label>Наполнитель:</label>
+          <label><input type="checkbox" name="filler"> шоколадные</label>
+          <label><input type="checkbox" name="filler"> сахарные присыпки</label>
+          <label><input type="checkbox" name="filler"> фрукты</label>
+          <label><input type="checkbox" name="filler"> сиропы</label>
+          <label><input type="checkbox" name="filler"> джемы</label>
+      </div>
+      <button>Применить</button>
       </form>
       <ul class="catalog__choice">
         <li>
@@ -192,6 +219,15 @@
         <!-- Здесь будет форма выбора страниц -->
       </form>
     </section>
+    <ul class="paginator">
+      <li><a href="">&lt;</a></li>
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">&gt;</a></li>
+    </ul>
     <div>
       <form> <!-- здесь будет форма обратной связи--> </form>
     </div>
