@@ -2,67 +2,66 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Интернет-магазин мороженого "Глейси"</title>
+    <title>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</title>
   </head>
   <body>
-    <header>
-      <nav class="header">
-          <a href="index.html">
+    <header class="header">
+      <nav class="header-nav">
+          <a class="header__logo-link" href="">
             <img class="header__logo" src="https://www.pngarts.com/files/3/Cute-Cat-PNG-Photo.png" width="154" height="64" alt="Логотип магазина «Глейси»">
           </a>
         <ul class="header__menu">
-          <li><a href="catalog.html">Каталог</a>
-          <ul class="inner__menu">
-            <li>Новинки</li>
-            <li class="divider"></li>
-            <li><a href="catalog.html">Сливочное</a></li>
-            <li>Щербеты</li>
-            <li>Фруктовый лед</li>
-            <li>Мелорин</li>
+          <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
+          <ul class="header__menu-inner">
+            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
+            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
+            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
+            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
+            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
           </ul>
           </li>
-          <li><a href="">Доставка и оплата</a></li>
-          <li><a href="">О компании</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
         </ul>
         <div class="header__user-buttons">
-        <span>
-          <a href="">
-            <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="17" height="17" alt="Окно поиска">
+          <div class="header__user-buttons-find">
+            <a class="header--find-link" href="">
+              <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="17" height="17" alt="Окно поиска">
+              </a>
+              <div>
+                <form> <!-- здесь будет окошко поиска--> </form>
+              </div>
+          </div>
+          <div class="header__user-buttons-enter">
+             <a href="header--enter-link">
+              <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="21" height="19" alt="Авторизация">Вход
             </a>
             <div>
-              <form> <!-- здесь будет окошко поиска--> </form>
+              <form> <!-- здесь будет форма авторизации--> </form>
             </div>
-        </span>
-         <span>
-           <a href="">
-            <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="21" height="19" alt="Авторизация">Вход
-          </a>
-          <div>
-            <form> <!-- здесь будет форма авторизации--> </form>
           </div>
-        </span>
-         <span>
-           <a href="">
-            <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="21" height="20" alt="Корзина">Корзина
-          </a>
-          <div>
-            <form> <!--здесь будет таблица с содержимым корзины--> </form>
+          <div class="header__user-buttons-basket">
+             <a href="header--basket-link">
+              <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="21" height="20" alt="Корзина">Корзина
+            </a>
+            <div>
+              <form> <!--здесь будет таблица с содержимым корзины--> </form>
+            </div>
           </div>
-        </span>
-        </div>
-      </nav>
-    </header>
-    <div class="contacts">
-      <p class="contacts__worktime">С 10 до 20, ежедневно</p>
-      <p class="contacts__phone">8 812 450-25-25</p>
-    </div>
-    <section class="catalog">
-      <ul class="page">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li>Сливочное</li>
+          </div>
+        </nav>
+        <div class="contacts">
+          <p class="contacts__worktime">С 10 до 20, ежедневно</p>
+          <p class="contacts__phone">8 812 450-25-25</p>
+      </div>
+      </header>
+    <main class="main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs-item">Сливочное</li>
       </ul>
-      <h1 class="catalog__current">Сливочное мороженое</h1>
+      <h1 class="main-title">Сливочное мороженое</h1>
       <form>
         <div class="form-group">
           <label for="sort_type">Сортировка:</label>
@@ -74,7 +73,8 @@
         </select>
       </div>
       <div class="form-group">
-          <label>Цена: 100 руб. – 500 руб.</label>
+          <label for="cost">Цена: 100 руб. – 500 руб.</label>
+          <input type="range" name="cost" min="100" max="500">
       </div>
       <div class="form-group">
           <label>Жирность:</label>
@@ -93,160 +93,152 @@
       </div>
       <button>Применить</button>
       </form>
-      <ul class="catalog__choice">
-        <li>
+      <ul class="catalog">
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">310</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">310</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">380</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">380</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочно-кофейное с кусочками шоколада</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">355</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">355</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочно-клубничное с присыпкой из белого шоколада</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">415</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">415</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочное крем-брюле с карамельной подливкой</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное крем-брюле с карамельной подливкой</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">325</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">325</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочное с брусничным джемом</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с брусничным джемом</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">410</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">410</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочно-черничное с цельными ягодами черники </span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-черничное с цельными ягодами черники</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">375</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">375</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочно-лимонное с карамельной присыпкой</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-лимонное с карамельной присыпкой</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">320</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">320</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочное с шоколадной стружкой</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с шоколадной стружкой</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">440</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">440</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочно-ванильное с кусочками шоколада</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-ванильное с кусочками шоколада</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">435</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">435</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочноe с ментоловым сиропом</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочноe с ментоловым сиропом</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">355</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">355</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочное с кусочками черного шоколада</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с кусочками черного шоколада</a></h3>
         </li>
-        <li>
+        <li class="catalog__item catalog-item">
           <div>
             <img src="https://avatanplus.com/files/resources/original/572863461129a15475c3c9b6.png" width="267" height="267" alt="Фото мороженого">
             <div>
-              <span class="catalog--price">420</span>
-              <span class="catalog--weight">₽/кг</span>
+              <span class="catalog-item__price">420</span>
+              <span class="catalog-item__weight">₽/кг</span>
             </div>
           </div>
-          <span class="catalog--name">Сливочное с мятным сиропом</span>
+          <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с мятным сиропом</a></h3>
         </li>
       </ul>
-      <form>
-        <!-- Здесь будет форма выбора страниц -->
-      </form>
-    </section>
-    <ul class="paginator">
-      <li><a href="">&lt;</a></li>
-      <li><a href="">1</a></li>
-      <li><a href="">2</a></li>
-      <li><a href="">3</a></li>
-      <li><a href="">4</a></li>
-      <li><a href="">5</a></li>
-      <li><a href="">&gt;</a></li>
-    </ul>
-    <div>
-      <form> <!-- здесь будет форма обратной связи--> </form>
-    </div>
-    <footer>
-      <ul class="footer__follow">
-          <li><a href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Твиттер"></a></li>
-          <li><a href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Инстаграм"></a></li>
-          <li><a href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Фейсбук"></a></li>
-          <li><a href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Вконтакте"></a></li>
+      <ul class="pagination">
+        <li class="pagination-item"><a class="pagination-link" href="">&lt;</a></li>
+        <li class="pagination-item"><a class="pagination-link" href="">1</a></li>
+        <li class="pagination-item"><a class="pagination-link" href="">2</a></li>
+        <li class="pagination-item"><a class="pagination-link" href="">3</a></li>
+        <li class="pagination-item"><a class="pagination-link" href="">4</a></li>
+        <li class="pagination-item"><a class="pagination-link" href="">5</a></li>
+        <li class="pagination-item"><a class="pagination-link" href="">&gt;</a></li>
+      </ul>
+    </main>
+    <footer class="footer">
+      <ul class="social-links">
+          <li class="social-links-item"><a class="social-links-item-link" href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Твиттер"></a></li>
+          <li class="social-links-item"><a class="social-links-item-link" href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Инстаграм"></a></li>
+          <li class="social-links-item"><a class="social-links-item-link" href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Фейсбук"></a></li>
+          <li class="social-links-item"><a class="social-links-item-link" href=""><img src="http://img.lenagold.ru/k/kot/kosh555.png" width="32" height="32" alt="Вконтакте"></a></li>
       </ul>
       <ul class="footer__about">
-          <li><a href="">
-            <img src="https://pngriver.com/wp-content/uploads/2018/03/Download-Cat-PNG-Pic-071.png" width="15" height="13" alt="Иконка сердечка">
-            Для поставщиков</a></li>
-          <li><a href="">О производстве</a></li>
+          <li class="footer__about-item footer__about__item"><a class="footer__about-link" href="">Для поставщиков</a></li>
+          <li><a class="footer__about-link" href="">О производстве</a></li>
       </ul>
-      <ul>
-        <li><a href="">Наши документы</a></li>
-          <li><a href="">Экологические стандарты</a></li>
+      <ul class="footer__about">
+        <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>
+        <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
       </ul>
       <a class="footer__developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="https://www.pngarts.com/files/3/Cute-Cat-PNG-Photo.png" width="109" height="38" alt="Логотип разработчика">
