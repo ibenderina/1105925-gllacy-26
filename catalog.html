@@ -24,28 +24,61 @@
           <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
         </ul>
         <div class="header__user-buttons">
-          <div class="header__user-buttons-find">
-            <a class="header--find-link" href="">
-              <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
-              </a>
-              <div>
-                <form> <!-- здесь будет окошко поиска--> </form>
+            <div class="header__user-buttons-find">
+                <a class="header__find-link" href="">
+                  <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+                  </a>
+                  <div>
+                    <form class="header__find-field">
+                      <label class="visually-hidden" for="find-field">Окно поиска</label>
+                      <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                    </form>
+                  </div>
               </div>
-          </div>
-          <div class="header__user-buttons-enter">
-             <a href="header--enter-link">
-              <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">Вход
-            </a>
-            <div>
-              <form> <!-- здесь будет форма авторизации--> </form>
-            </div>
-          </div>
+              <div class="header__user-buttons-enter">
+                  <button class="header__enter-link">
+                    <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">
+                    Вход
+                  </button>
+                  <div class="header__enter-field">
+                    <form>
+                        <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
+                        <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                        <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                        <input type="password" placeholder="Пароль" name="user-password" id="user-password">
+                        <button type="submit">Войти</button>
+                        <div class="enter-field__forgot-password">
+                          <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
+                          <a class="enter-field__new-user" href="">Новая регистрация</a>
+                        </div>
+                    </form>
+                  </div>
+                </div>
           <div class="header__user-buttons-basket">
              <a href="header--basket-link">
-              <img src="img/basket-red.svg" width="21" height="20" alt="Корзина">Корзина
+              <img src="img/basket-red.svg" width="21" height="20" alt="Корзина">2 товара
             </a>
-            <div>
-              <form> <!--здесь будет таблица с содержимым корзины--> </form>
+            <div class="basket-table">
+              <form>
+                <table class="basket-table__content">
+                  <tr class="basket-table__product">
+                    <td class="basket-table__product-delete"><button aria-label="Удалить товар">X</button></td>
+                    <td class="basket-table__product-image"><img src="img/mini__ice-cream__1.jpeg" width="33" height="33" alt="иконка мороженого"></td>
+                    <td class="basket-table__product-name">Пломбир с апельсиновым джемом</td>
+                    <td class="basket-table__product-weight">1,5 кг х 200 руб.</td>
+                    <td class="basket-table__product-price">300 руб.</td>
+                  </tr>
+                  <tr class="basket-table__product">
+                      <td class="basket-table__product-delete"><button aria-label="Удалить товар">X</button></td>
+                      <td class="basket-table__product-image"><img src="img/mini__ice-cream__2.jpeg" width="33" height="33" alt="иконка мороженого"></td>
+                      <td class="basket-table__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="basket-table__product-weight">1,5 кг х 300 руб.</td>
+                      <td class="basket-table__product-price">450  руб.</td>
+                    </tr>
+                </table>
+                  <p class="basket-table__product-sum"><b>Итого: 750 руб.</b></p>
+                  <button type="submit" name="basket-table__order">Оформить заказ</button>
+              </form>
             </div>
           </div>
           </div>

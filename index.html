@@ -5,9 +5,20 @@
     <title>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</title>
   </head>
   <body>
+    <div class="call-back">
+      <form>
+        <p class="call-back__text">Мы обязательно вам ответим!</p>
+        <label class="visually-hidden" for="username">Введите имя</label>
+        <input type="text" name="username" id="username" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="usermail">Введите электронную почту</label>
+        <input type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
+        <textarea rows="7" placeholder="Напишите что-нибудь..."></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
     <header class="header">
       <nav class="header-nav">
-          <a class="header__logo-link" href="">
+          <a class="header__logo-link" href="index.html">
             <img class="header__logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
           </a>
         <ul class="header__menu">
@@ -24,30 +35,41 @@
           <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
         </ul>
         <div class="header__user-buttons">
-        <div class="header__user-buttons-find">
-          <a class="header--find-link" href="">
-            <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
-            </a>
-            <div>
-              <form> <!-- здесь будет окошко поиска--> </form>
+          <div class="header__user-buttons-find">
+            <a class="header__find-link" href="">
+              <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+              </a>
+              <div>
+                <form class="header__find-field">
+                  <label class="visually-hidden" for="find-field">Окно поиска</label>
+                  <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                </form>
+              </div>
+          </div>
+          <div class="header__user-buttons-enter">
+            <button class="header__enter-link">
+              <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">
+              Вход
+            </button>
+            <div class="header__enter-field">
+              <form>
+                  <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
+                  <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                  <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                  <input type="password" placeholder="Пароль" name="user-password" id="user-password">
+                  <button type="submit">Войти</button>
+                  <div class="enter-field__forgot-password">
+                    <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
+                    <a class="enter-field__new-user" href="">Новая регистрация</a>
+                  </div>
+              </form>
             </div>
-        </div>
-        <div class="header__user-buttons-enter">
-           <a href="header--enter-link">
-            <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">Вход
-          </a>
-          <div>
-            <form> <!-- здесь будет форма авторизации--> </form>
           </div>
-        </div>
-        <div class="header__user-buttons-basket">
-           <a href="header--basket-link">
-            <img src="img/basket.svg" width="21" height="20" alt="Корзина">Корзина
-          </a>
-          <div>
-            <form> <!--здесь будет таблица с содержимым корзины--> </form>
+          <div class="header__user-buttons-basket">
+            <a href="header--basket-link">
+              <img src="img/basket.svg" width="21" height="20" alt="Корзина">Пусто
+            </a>
           </div>
-        </div>
         </div>
       </nav>
       <div class="contacts">
@@ -56,7 +78,7 @@
     </div>
     </header>
     <main>
-        <h1>Интернет-магазин мороженого <!-- этот заголовок надо будет потом скрыть --> </h1>
+        <h1 class="visually-hidden">Интернет-магазин мороженого</h1>
         <h2>Крем-брюле и пломбир <br>
           с малиновым джемом</h2>
           <a class="full-basket">Давайте оба!</a>
@@ -144,7 +166,8 @@
       <p class="subscribes__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
       </p>
       <form class="subscribes__form">
-        <!-- Здесь будет форма отправки мейлов, сделаю после лекции про формы -->
+        <label class="visually-hidden" for="subscribes-email">Введите электронную почту для подписки на рассылку</label>
+        <input type="email" placeholder="Электронная почта" name="subscribes-email" id="subscribes-email">
         <button class="subscribes__button">Отправить</button>
       </form>
     </section>
@@ -152,10 +175,11 @@
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AXWUbK2nw6gR2-xpv16dDyL_sRWGopB5q&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
     </section>
     <section class="address">
-      <p class="address__text">Адрес главного офиса и офлайн-магазина: </p>
+      <p class="address__text">Адрес главного офиса  и офлайн-магазина: </p>
       <p class="address__text address__text--bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
       <p class="address__text">Для заказов по телефону:</p>
-      <p class="address__text address__text--bold">8 812 450-25-25 (с 10 до 20 ежедневно) </p>
+      <p class="address__text address__text--bold">
+        <a href="tel: 8 812 450-25-25">8 812 450-25-25 </a>(с 10 до 20 ежедневно) </p>
       <a class="address__button" href="">Форма обратной связи</a>
     </section>
     <footer class="footer">
