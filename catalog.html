@@ -3,91 +3,80 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <nav class="header-nav">
-          <a class="header__logo-link" href="">
+          <a class="header__logo-link" href="index.html">
             <img class="header__logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
           </a>
-        <ul class="header__menu">
-          <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
-          <ul class="header__menu-inner">
-            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
-            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
-            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
-            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
-            <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
+          <ul class="header__menu">
+            <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
+              <ul class="header__menu-inner">
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
           </ul>
-          </li>
-          <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
-        </ul>
         <div class="header__user-buttons">
-            <div class="header__user-buttons-find">
-                <a class="header__find-link" href="">
-                  <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
-                  </a>
-                  <div>
-                    <form class="header__find-field">
-                      <label class="visually-hidden" for="find-field">Окно поиска</label>
-                      <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
-                    </form>
-                  </div>
+          <div class="header__user-buttons-find">
+            <a class="header__find-link" href="">
+              <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+              </a>
+              <div>
+                <form class="header__find-field">
+                  <label class="visually-hidden" for="find-field">Окно поиска</label>
+                  <input class="visually-hidden" type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                </form>
               </div>
-              <div class="header__user-buttons-enter">
-                  <button class="header__enter-link">
-                    <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">
-                    Вход
-                  </button>
-                  <div class="header__enter-field">
-                    <form>
-                        <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                        <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
-                        <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
-                        <input type="password" placeholder="Пароль" name="user-password" id="user-password">
-                        <button type="submit">Войти</button>
-                        <div class="enter-field__forgot-password">
-                          <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
-                          <a class="enter-field__new-user" href="">Новая регистрация</a>
-                        </div>
-                    </form>
-                  </div>
-                </div>
-          <div class="header__user-buttons-basket">
-             <a href="header--basket-link">
-              <img src="img/basket-red.svg" width="21" height="20" alt="Корзина">2 товара
-            </a>
-            <div class="basket-table">
+          </div>
+          <div class="header__user-buttons-enter">
+            <button class="header__enter-link"  type="button">
+              <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">
+              Вход
+            </button>
+            <div class="header__enter-field visually-hidden">
               <form>
-                <table class="basket-table__content">
-                  <tr class="basket-table__product">
-                    <td class="basket-table__product-delete"><button aria-label="Удалить товар">X</button></td>
-                    <td class="basket-table__product-image"><img src="img/mini__ice-cream__1.jpeg" width="33" height="33" alt="иконка мороженого"></td>
-                    <td class="basket-table__product-name">Пломбир с апельсиновым джемом</td>
-                    <td class="basket-table__product-weight">1,5 кг х 200 руб.</td>
-                    <td class="basket-table__product-price">300 руб.</td>
-                  </tr>
-                  <tr class="basket-table__product">
-                      <td class="basket-table__product-delete"><button aria-label="Удалить товар">X</button></td>
-                      <td class="basket-table__product-image"><img src="img/mini__ice-cream__2.jpeg" width="33" height="33" alt="иконка мороженого"></td>
-                      <td class="basket-table__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                      <td class="basket-table__product-weight">1,5 кг х 300 руб.</td>
-                      <td class="basket-table__product-price">450  руб.</td>
-                    </tr>
-                </table>
-                  <p class="basket-table__product-sum"><b>Итого: 750 руб.</b></p>
-                  <button type="submit" name="basket-table__order">Оформить заказ</button>
+                  <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
+                  <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                  <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                  <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
+                  <button type="submit">Войти</button>
+                  <div class="enter-field__forgot-password">
+                    <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
+                    <a class="enter-field__new-user" href="">Новая регистрация</a>
+                  </div>
               </form>
             </div>
           </div>
+          <div class="header__user-buttons-basket">
+            <a href="header--basket-link">
+              <img src="img/basket.svg" width="21" height="20" alt="Корзина">Корзина
+            </a>
           </div>
-        </nav>
-        <div class="contacts">
-          <p class="contacts__worktime">С 10 до 20, ежедневно</p>
-          <p class="contacts__phone"><a href="tel: 8 812 450-25-25">8 812 450-25-25</a></p>
-      </div>
-      </header>
+        </div>
+      </nav>
+      <div class="contacts">
+        <p class="contacts__worktime">С 10 до 20, ежедневно</p>
+        <p class="contacts__phone"><a href="tel: 8 812 450-25-25">8 812 450-25-25</a></p>
+    </div>
+    </header>
+
+
+
+
+    <!--  Все, что выше этого комментария, одинаково для всех страниц сайта, можно просто копировать -->
+
+
+
     <main class="main">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
@@ -95,40 +84,50 @@
         <li class="breadcrumbs__item">Сливочное</li>
       </ul>
       <h1 class="main__title">Сливочное мороженое</h1>
-      <form>
-        <div class="form-group">
-          <label for="sort_type">Сортировка:</label>
-        <select name="sort_type" id="sort_type">
-          <option>по популярности</option>
-          <option>сначала недорогие</option>
-          <option>сначала дорогие</option>
-          <option>по жирности</option>
-        </select>
-      </div>
-      <div class="form-group">
-          <label for="cost">Цена: 100 руб. – 500 руб.</label>
-          <input type="range" name="cost" min="100" max="500">
-      </div>
-      <div class="form-group">
-          <label>Жирность:</label>
-          <label><input type="radio" name="fat"> 0%</label>
-          <label><input type="radio" name="fat"> до 10%</label>
-          <label><input type="radio" name="fat"> до 30%</label>
-          <label><input type="radio" name="fat"> выше 30%</label>
-      </div>
-      <div class="form-group">
-          <label>Наполнитель:</label>
-          <label><input type="checkbox" name="filler"> шоколадные</label>
-          <label><input type="checkbox" name="filler"> сахарные присыпки</label>
-          <label><input type="checkbox" name="filler"> фрукты</label>
-          <label><input type="checkbox" name="filler"> сиропы</label>
-          <label><input type="checkbox" name="filler"> джемы</label>
-      </div>
-      <button>Применить</button>
+
+
+
+      <form class="form form--inline">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sort_type">Сортировка:</label>
+            <select name="sort_type" id="sort_type">
+              <option>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+          </div>
+          <div class="form-group">
+              <label for="cost">Цена: 100 руб. – 500 руб.</label>
+              <input type="range" name="cost" min="100" max="500">
+          </div>
+          <div class="form-group">
+              <label>Жирность:</label>
+              <label><input type="radio" name="fat"> 0%</label>
+              <label><input type="radio" name="fat"> до 10%</label>
+              <label><input type="radio" name="fat"> до 30%</label>
+              <label><input type="radio" name="fat"> выше 30%</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+              <label>Наполнитель:</label>
+              <label><input type="checkbox" name="filler"> шоколадные</label>
+              <label><input type="checkbox" name="filler"> сахарные присыпки</label>
+              <label><input type="checkbox" name="filler"> фрукты</label>
+              <label><input type="checkbox" name="filler"> сиропы</label>
+              <label><input type="checkbox" name="filler"> джемы</label>
+          </div>
+          <button>Применить</button>
+        </div>
       </form>
+
+
+
       <ul class="catalog">
           <li class="catalog__item catalog-item">
-              <div>
+              <div class="">
                 <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">310</span>
@@ -148,13 +147,12 @@
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
             </li>
             <li class="catalog__item catalog-item">
+              <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
               <div>
-                <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
-                  <span class="catalog-item__price">355</span>
-                  <span class="catalog-item__weight">₽/кг</span>
-                </div>
+                <span class="catalog-item__price">355</span>
+                <span class="catalog-item__weight">₽/кг</span>
               </div>
+              <button class="catalog-item__hover-button">Быстрый просмотр</button>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
             </li>
             <li class="catalog__item catalog-item">
@@ -248,9 +246,12 @@
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с мятным сиропом</a></h3>
         </li>
       </ul>
+
+
+
       <ul class="pagination">
         <li class="pagination__item"><a class="pagination__link" href="">&lt;</a></li>
-        <li class="pagination__item"><a class="pagination__link" href="">1</a></li>
+        <li class="pagination__item"><a class="pagination__link pagination__item--active" href="">1</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">4</a></li>
@@ -258,10 +259,15 @@
         <li class="pagination__item"><a class="pagination__link" href="">&gt;</a></li>
       </ul>
     </main>
+
+
+    <!-- Все, что ниже этого комментария, одинаково для всех страниц сайта -->
+
+
     <footer class="footer">
         <ul class="social-links">
           <li class="social-links__item">
-            <a class="social-links__link"href="">
+            <a class="social-links__link" href="">
             <img src="img/twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
           <li class="social-links__item">
             <a class="social-links__link" href="">
@@ -274,8 +280,12 @@
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
         </ul>
         <ul class="footer__about">
-            <li class="footer__about-item footer__about-item--icon"><a class="footer__about-link" href="">Для поставщиков</a></li>
-            <li><a class="footer__about-link" href="">О производстве</a></li>
+            <li class="footer__about-item">
+              <i class="footer__about-item--icon"></i>
+              <a class="footer__about-link" href="">Для поставщиков</a>
+            </li>
+            <li><a class="footer__about-link" href="">О производстве</a>
+            </li>
         </ul>
         <ul class="footer__about">
           <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>

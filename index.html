@@ -3,37 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="call-back">
-      <form>
-        <p class="call-back__text">Мы обязательно вам ответим!</p>
-        <label class="visually-hidden" for="username">Введите имя</label>
-        <input type="text" name="username" id="username" placeholder="Как вас зовут?">
-        <label class="visually-hidden" for="usermail">Введите электронную почту</label>
-        <input type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
-        <textarea rows="7" placeholder="Напишите что-нибудь..."></textarea>
-        <button type="submit">Отправить</button>
-      </form>
-    </div>
     <header class="header">
       <nav class="header-nav">
           <a class="header__logo-link" href="index.html">
             <img class="header__logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
           </a>
-        <ul class="header__menu">
-          <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
-            <ul class="header__menu-inner">
-              <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
-              <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
-              <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
-              <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
-              <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
-            </ul>
-          </li>
-          <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
-        </ul>
+          <ul class="header__menu">
+            <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
+              <ul class="header__menu-inner">
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
+          </ul>
         <div class="header__user-buttons">
           <div class="header__user-buttons-find">
             <a class="header__find-link" href="">
@@ -42,21 +34,21 @@
               <div>
                 <form class="header__find-field">
                   <label class="visually-hidden" for="find-field">Окно поиска</label>
-                  <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                  <input class="visually-hidden" type="text" placeholder="Что ищем?" name="find-field" id="find-field">
                 </form>
               </div>
           </div>
           <div class="header__user-buttons-enter">
-            <button class="header__enter-link">
+            <button class="header__enter-link"  type="button">
               <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">
               Вход
             </button>
-            <div class="header__enter-field">
+            <div class="header__enter-field visually-hidden">
               <form>
                   <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
                   <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
                   <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
-                  <input type="password" placeholder="Пароль" name="user-password" id="user-password">
+                  <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
                   <button type="submit">Войти</button>
                   <div class="enter-field__forgot-password">
                     <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
@@ -67,7 +59,7 @@
           </div>
           <div class="header__user-buttons-basket">
             <a href="header--basket-link">
-              <img src="img/basket.svg" width="21" height="20" alt="Корзина">Пусто
+              <img src="img/basket.svg" width="21" height="20" alt="Корзина">Корзина
             </a>
           </div>
         </div>
@@ -77,21 +69,63 @@
         <p class="contacts__phone"><a href="tel: 8 812 450-25-25">8 812 450-25-25</a></p>
     </div>
     </header>
+
+
+
+    <!--  Все, что выше этого комментария, одинаково для всех страниц сайта, можно просто копировать -->
+
+
+
+    <div class="call-back visually-hidden">
+      <form>
+        <p class="call-back__text">Мы обязательно вам ответим!</p>
+        <label class="visually-hidden" for="username">Введите имя</label>
+        <input type="text" name="username" id="username" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="usermail">Введите электронную почту</label>
+        <input type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
+        <textarea rows="7" placeholder="Напишите что-нибудь..."></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+
+
+    <!--  Выше форма обратной связи, реагирует на кнопку "class="address__button"" на главной странице -->
+
+
     <main>
         <h1 class="visually-hidden">Интернет-магазин мороженого</h1>
-        <h2>Крем-брюле и пломбир <br>
-          с малиновым джемом</h2>
-          <a class="full-basket">Давайте оба!</a>
+        <div class="carusel">
+          <div class="carusel__slider">
+            <button class="carusel__slider-item" type="button"><label class="visually-hidden">Первый слайд</label></button>
+            <button class="carusel__slider-item" type="button"><label class="visually-hidden">Второй слайд</label></button>
+            <button class="carusel__slider-item" type="button"><label class="visually-hidden">Третий слайд</label></button>
+          </div>
+          <div class="carusel__image">
+            <div class="carusel__image-item">
+              <img src="img/main_ice-cream__1.png" width="372" height="584" alt="Фото мороженки">
+              <img src="img/main_ice-cream__2.png" width="333" height="519" alt="Фото мороженки">
+              <h2>Крем-брюле и пломбир <br>
+              с малиновым джемом</h2>
+              <a class="full-basket">Давайте оба!</a>
+            </div>
+          </div>
+        </div>
         <ul class="gifts">
           <li class="gifts-item gifts__item">
-            <h2 class="gifts-item__title">Малинка даром!</h2>
-            <p class="gifts-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно. </p>
-            <a class="gifts-item__link" href="">Хочу варенье!</a>
+            <img src="img/gifts-item__background--berry.jpeg" width="787" height="410" alt="Фон с малинкой">
+            <div class="gifts-item__content">
+              <h2 class="gifts-item__title">Малинка даром!</h2>
+              <p class="gifts-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно. </p>
+              <a class="gifts-item__link" href="">Хочу варенье!</a>
+            </div>
             </li>
           <li class="gifts-item gifts__item">
-            <h2 class="gifts-item__title">Шоколадки даром!</h2>
-            <p class="gifts-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.   </p>
+            <img src="img/gifts-item__background--choco.jpeg" width="787" height="410" alt="Фон с шоколадкой">
+            <div class="gifts-item__content">
+              <h2 class="gifts-item__title">Шоколадки даром!</h2>
+              <p class="gifts-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.   </p>
               <a class="gifts-item__link" href="">Хочу шоколадки!</a>
+            </div>
             </li>
         </ul>
         <ul class="catalog">
@@ -137,29 +171,37 @@
             </li>
             </ul>
     </main>
+
+
     <section class="benefits">
       <p class="benefits__text">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="benefits__list">
-        <li class="benefits__list-item benefits__list-item--icon">
+        <li class="benefits__list-item">
+          <i class="benefits__list-item-icon"></i>
         Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-        <li class="benefits__list-item benefits__list-item--icon">
+        <li class="benefits__list-item">
+          <i class="benefits__list-item-icon"></i>
         Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-        <li class="benefits__list-item benefits__list-item--icon">
+        <li class="benefits__list-item">
+          <i class="benefits__list-item-icon"></i>
         Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-        <li class="benefits__list-item benefits__list-item--icon">
+        <li class="benefits__list-item">
+          <i class="benefits__list-item-icon"></i>
         Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
       </ul>
     </section>
     <section class="articles__stock">
       <div class="article">
-        <a class="article__rubric" href="">
-            Новое в нашем блоге
-        </a>
-        <a class="article__title" href="">
-            10 способов сервировки
-            фруктовых щербетов к
-            столу
-        </a>
+        <div class="article__content">
+            <a class="article__rubric" href="">
+                Новое в нашем блоге
+            </a>
+            <a class="article__title" href="">
+                10 способов сервировки
+                фруктовых щербетов к
+                столу
+            </a>
+        </div>
       </div>
     </section>
     <section class="subscribes">
@@ -182,6 +224,11 @@
         <a href="tel: 8 812 450-25-25">8 812 450-25-25 </a>(с 10 до 20 ежедневно) </p>
       <a class="address__button" href="">Форма обратной связи</a>
     </section>
+
+
+    <!-- Все, что ниже этого комментария, одинаково для всех страниц сайта -->
+
+
     <footer class="footer">
         <ul class="social-links">
           <li class="social-links__item">
@@ -198,8 +245,12 @@
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
         </ul>
         <ul class="footer__about">
-            <li class="footer__about-item footer__about-item--icon"><a class="footer__about-link" href="">Для поставщиков</a></li>
-            <li><a class="footer__about-link" href="">О производстве</a></li>
+            <li class="footer__about-item">
+              <i class="footer__about-item--icon"></i>
+              <a class="footer__about-link" href="">Для поставщиков</a>
+            </li>
+            <li><a class="footer__about-link" href="">О производстве</a>
+            </li>
         </ul>
         <ul class="footer__about">
           <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>

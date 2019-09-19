@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+
+  background-color: #849D8F;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FFBC9E;
+}
+
+.header {
+	width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.header__menu-inner {
+  display: none;
+}
+
+.header__menu-item:hover .header__menu-inner {
+  display: inline-block;
+  border: 1px solid white;
+}
+
+.header__menu-item a:hover {
+  text-decoration: none;
+  color: #323232;
+  background-color: #F7F6F3;
+  border-radius: 20%;
+}
+
+.header__menu-item--active {
+  background-color: #D07058;
+}
+
+.header__menu-inner {
+  background-color: #F8F7F4;
+}
+
+.header__menu-inner a {
+  color: #323232;
+}
+
+.header__menu-inner a:hover {
+  background-color: #FFBC9E;
+}
+
+.header__find-link {
+  background-color: #9FB3A8;
+  background-size: 35px;
+  border-radius: 50%;
+}
+
+.header__user-buttons-basket {
+  background-color: #9FB3A8;
+  background-size: 103px;
+  border-radius: 20%;
+  display: inline-block;
+}
+
+.form--inline .form-group {
+  display: inline-block;
+}
+
+
+.catalog-item:hover {
+  background-color:rgba(255, 255, 255, .4);
+  width: 292.99px;
+  height: 405.01;
+}
+
+.catalog-item__hover-button {
+  display: none;
+}
+
+.catalog-item:hover .catalog-item__hover-button {
+  display: block;
+}
+
+.catalog-item img {
+  border-radius: 50%;
+}
+.catalog__item {
+  display: inline-block;
+  width: 270px;
+}
+
+.catalog {
+  width: 1200px;
+}
+
+.gifts-item {
+  position: relative;
+}
+
+.gifts-item__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+.benefits {
+  background-image: url(../img/benefits__background.jpeg);
+  width: 1165px;
+  height: 325px;
+  border: 1px solid #979797;
+  border-radius: 15px;
+  color: black;
+}
+
+.benefits__list-item:nth-child(1) .benefits__list-item-icon {
+  background-image: url(../img/ice-cream.svg);
+}
+
+.benefits__list-item:nth-child(2) .benefits__list-item-icon {
+  background-image: url(../img/eco.svg);
+}
+
+.benefits__list-item:nth-child(3) .benefits__list-item-icon {
+  background-image: url(../img/cow.svg);
+}
+
+.benefits__list-item:nth-child(4) .benefits__list-item-icon {
+  background-image: url(../img/thermometer.svg);
+}
+
+.benefits__list-item-icon {
+  width: 49px;
+  height: 49px;
+  display: inline-block;
+}
+
+.article {
+  position: relative;
+  background-image: url(../img/articles__background.jpeg);
+  background-size: cover;
+  width: 500px;
+  height: 350px;
+}
+
+.article__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.article__content a {
+  color: #323232;
+}
+
+
+.social-links__item img {
+  display: inline;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,.5);
+}
+
+.social-links__item {
+  display: inline;
+}
+
+.footer__about-item--icon {
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
+  display: inline-block;
+
+}
+
+.pagination__item--active {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  width: 29px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  color: #353535;
+}
+
+.pagination__item {
+  display: inline;
+}
+
