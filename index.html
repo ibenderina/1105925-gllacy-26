@@ -3,16 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <nav class="header-nav">
-          <a class="header__logo-link" href="index.html">
             <img class="header__logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
-          </a>
           <ul class="header__menu">
             <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
               <ul class="header__menu-inner">
@@ -39,27 +37,26 @@
               </div>
           </div>
           <div class="header__user-buttons-enter">
-            <button class="header__enter-link"  type="button">
-              <img src="img/entrance.svg" width="21" height="19" alt="Авторизация">
-              Вход
-            </button>
+            <a class="header__enter-link" href="">
+                <img src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
+            </a>
             <div class="header__enter-field visually-hidden">
-              <form>
-                  <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                  <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
-                  <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
-                  <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
-                  <button type="submit">Войти</button>
-                  <div class="enter-field__forgot-password">
-                    <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
-                    <a class="enter-field__new-user" href="">Новая регистрация</a>
-                  </div>
-              </form>
+                <form>
+                    <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
+                    <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                    <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                    <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
+                    <button type="submit">Войти</button>
+                    <div class="enter-field__forgot-password">
+                      <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
+                      <a class="enter-field__new-user" href="">Новая регистрация</a>
+                    </div>
+                </form>
             </div>
           </div>
           <div class="header__user-buttons-basket">
-            <a href="header--basket-link">
-              <img src="img/basket.svg" width="21" height="20" alt="Корзина">Корзина
+            <a class="header--basket-link" href="">
+              <img src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
             </a>
           </div>
         </div>
@@ -96,9 +93,9 @@
         <h1 class="visually-hidden">Интернет-магазин мороженого</h1>
         <div class="carusel">
           <div class="carusel__slider">
-            <button class="carusel__slider-item" type="button"><label class="visually-hidden">Первый слайд</label></button>
-            <button class="carusel__slider-item" type="button"><label class="visually-hidden">Второй слайд</label></button>
-            <button class="carusel__slider-item" type="button"><label class="visually-hidden">Третий слайд</label></button>
+            <div class="carusel__slider-item"><label class="visually-hidden">Первый слайд</label></div>
+            <div class="carusel__slider-item"><label class="visually-hidden">Второй слайд</label></div>
+            <div class="carusel__slider-item"><label class="visually-hidden">Третий слайд</label></div>
           </div>
           <div class="carusel__image">
             <div class="carusel__image-item">
@@ -112,7 +109,7 @@
         </div>
         <ul class="gifts">
           <li class="gifts-item gifts__item">
-            <img src="img/gifts-item__background--berry.jpeg" width="787" height="410" alt="Фон с малинкой">
+            <img src="img/gifts-item__background--berry.jpeg" width="570" height="300" alt="Фон с малинкой">
             <div class="gifts-item__content">
               <h2 class="gifts-item__title">Малинка даром!</h2>
               <p class="gifts-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно. </p>
@@ -120,7 +117,7 @@
             </div>
             </li>
           <li class="gifts-item gifts__item">
-            <img src="img/gifts-item__background--choco.jpeg" width="787" height="410" alt="Фон с шоколадкой">
+            <img src="img/gifts-item__background--choco.jpeg" width="570" height="300" alt="Фон с шоколадкой">
             <div class="gifts-item__content">
               <h2 class="gifts-item__title">Шоколадки даром!</h2>
               <p class="gifts-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.   </p>
@@ -247,7 +244,7 @@
         <ul class="footer__about">
             <li class="footer__about-item">
               <i class="footer__about-item--icon"></i>
-              <a class="footer__about-link" href="">Для поставщиков</a>
+              <a class="footer__about-link footer__about-link--bold" href="">Для поставщиков</a>
             </li>
             <li><a class="footer__about-link" href="">О производстве</a>
             </li>
