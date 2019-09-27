@@ -20,9 +20,10 @@ body {
 
 /* исправить */
 
-.header__menu, .gifts, .catalog, .benefits__list, .social-links, .footer__about, .breadcrumbs, .pagination {
+.header__menu, .gifts, .catalog, .benefits__list, .social-links, .footer__about, .breadcrumbs, .pagination, .header__menu-inner {
   list-style-type: none;
 }
+
 /* Выше перечислены все ul */
 
 a {
@@ -32,7 +33,7 @@ a {
 }
 
 a:hover {
-  color: #FFBC9E;
+  color: #e84d37;
 }
 
 /* Ниже стили для шапки */
@@ -68,29 +69,50 @@ a:hover {
   padding-bottom: 3px;
 }
 
+.header__menu-inner a:hover {
+  background-color: #fbded7;
+}
+
 .header__menu-inner a {
   color: #323232;
 }
 
-.header__menu-inner a:hover {
-  background-color: #FFBC9E;
-}
-
 .header__menu-item {
   display: inline-block;
-  padding-right: 20px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .header__menu-item:hover .header__menu-inner {
   display: inline-block;
-  border: 1px solid white;
 }
 
-.header__menu-item a:hover {
+.header__menu-inner-item {
+  padding: 10px;
+}
+
+.header__menu-inner {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  line-height: 160%;
+}
+
+.header__menu-inner a:hover {
+  background-color: #fbded8;
+  display: inline;
+}
+
+.header__menu-link:hover {
   color: #323232;
-  background-color: #F7F6F3;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #f7f6f3;
+}
+
+.header__menu-link {
+  padding: 4px 13px;
 }
 
 .header__menu-item--active {
@@ -120,7 +142,7 @@ a:hover {
 }
 
 .header__user-buttons-basket, .header__enter-link {
-  background-color: #9FB3A8;
+  background-color: rgba(255,255,255,.2);
   background-size: 103px;
   border: 1px solid transparent;
   color: white;
@@ -186,7 +208,9 @@ a:hover {
   font-weight: 700;
   font-size: 32px;
   color: #FFFFFF;
-  background-color: #E74A35;
+  background-color: rgba (172, 16, 0, 0.64);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 50px;
   width: 282px;
   padding: 15px 40px;
@@ -224,13 +248,18 @@ a:hover {
 
 .gifts-item__link {
   display: flex;
-  background-color: #E74A35;
+  background-color: rgba (172, 16, 0, 0.64);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 20px;
   text-decoration: none;
   padding: 10px;
   text-align: center;
   position: absolute;
   right: 21px;
+  bottom: 23px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* Выше блок с акционными товарами */
@@ -463,7 +492,9 @@ a:hover {
 }
 
 .subscribes__button {
-  background-color: #E74A35;
+  background-color: rgba (172, 16, 0, 0.64);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 20px;
   text-decoration: none;
   padding: 10px 15px;
@@ -503,7 +534,9 @@ a:hover {
   font-size: 18px;
   font-weight: 700;
   display: block;
-  background-color: #E74A35;
+  background-color: rgba (172, 16, 0, 0.64);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 20px;
   width: 192px;
   text-align: center;
