@@ -14,7 +14,7 @@
           <ul class="header__menu">
             <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
               <ul class="header__menu-inner">
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
+                <li class="header__menu-inner-item header__menu-inner-item--bold"><a class="header__menu-inner-link" href="">Новинки</a></li>
                 <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
                 <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
                 <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
@@ -69,7 +69,7 @@
 
 
 
-    <!--  Все, что выше этого комментария, одинаково для всех страниц сайта, можно просто копировать -->
+    <!--  Все, что выше этого комментария КРОМЕ ЛОГО, одинаково для всех страниц сайта, можно просто копировать -->
 
 
 
@@ -103,7 +103,7 @@
               <img src="img/main_ice-cream__2.png" width="333" height="519" alt="Фото мороженки">
               <h2>Крем-брюле и пломбир <br>
               с малиновым джемом</h2>
-              <a class="full-basket">Давайте оба!</a>
+              <a class="full-basket" href="">Давайте оба!</a>
             </div>
           </div>
         </div>
@@ -131,7 +131,8 @@
                 <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">310</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -141,7 +142,8 @@
                 <img src="img/ice-cream__2.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">380</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -151,7 +153,8 @@
                 <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">355</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
@@ -161,7 +164,8 @@
                 <img src="img/ice-cream__4.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">415</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -174,17 +178,29 @@
       <p class="benefits__text">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="benefits__list">
         <li class="benefits__list-item">
-          <i class="benefits__list-item-icon"></i>
-        Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          <div class="benefits__list-item-icon">
+            <i></i>
+          </div>
+          <span class="benefits__list-item-text">
+          Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем
+          технологий.</span>
+        </li>
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
-        Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+        <span class="benefits__list-item-text">
+        Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки
+        произведены из натурального, экологически чистого сырья.</span>
+      </li>
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
-        Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <span class="benefits__list-item-text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное
+            сотрудничество.</span>
+        </li>
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
-        Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+        <span class="benefits__list-item-text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и
+          позволяет сохранить превосходный вкус.</span>
+        </li>
       </ul>
     </section>
     <section class="articles__stock">

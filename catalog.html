@@ -8,22 +8,22 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <nav class="header-nav">
-            <img class="header__logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
-          <ul class="header__menu">
-            <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
-              <ul class="header__menu-inner">
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Новинки</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
+      <header class="header">
+          <nav class="header-nav">
+                <img class="header__logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
+              <ul class="header__menu">
+                <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
+                  <ul class="header__menu-inner">
+                    <li class="header__menu-inner-item header__menu-inner-item--bold"><a class="header__menu-inner-link" href="">Новинки</a></li>
+                    <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
+                    <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
+                    <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
+                    <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
               </ul>
-            </li>
-            <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
-          </ul>
         <div class="header__user-buttons">
           <div class="header__user-buttons-find">
             <a class="header__find-link" href="">
@@ -71,7 +71,7 @@
 
 
 
-    <!--  Все, что выше этого комментария, одинаково для всех страниц сайта, можно просто копировать -->
+    <!--  Все, что выше этого комментария КРОМЕ ЛОГО, одинаково для всех страниц сайта, можно просто копировать -->
 
 
 
@@ -89,35 +89,43 @@
         <div class="form-row">
           <div class="form-group">
             <label for="sort_type">Сортировка:</label>
-            <select name="sort_type" id="sort_type">
-              <option>по популярности</option>
-              <option>сначала недорогие</option>
-              <option>сначала дорогие</option>
-              <option>по жирности</option>
-            </select>
+            <div class="form-group-style">
+              <select class="sort_type" name="sort_type" id="sort_type">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
               <label for="cost">Цена: 100 руб. – 500 руб.</label>
-              <input type="range" name="cost" min="100" max="500">
+              <div class="form-group-style">
+                <input type="range" name="cost" min="100" max="500">
+              </div>
           </div>
           <div class="form-group">
               <label>Жирность:</label>
-              <label><input type="radio" name="fat"> 0%</label>
-              <label><input type="radio" name="fat"> до 10%</label>
-              <label><input type="radio" name="fat"> до 30%</label>
-              <label><input type="radio" name="fat"> выше 30%</label>
+              <div class="form-group-style">
+                <label><input type="radio" name="fat"> 0%</label>
+                <label><input type="radio" name="fat"> до 10%</label>
+                <label><input type="radio" name="fat"> до 30%</label>
+                <label><input type="radio" name="fat"> выше 30%</label>
+              </div>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-              <label>Наполнитель:</label>
-              <label><input type="checkbox" name="filler"> шоколадные</label>
-              <label><input type="checkbox" name="filler"> сахарные присыпки</label>
-              <label><input type="checkbox" name="filler"> фрукты</label>
-              <label><input type="checkbox" name="filler"> сиропы</label>
-              <label><input type="checkbox" name="filler"> джемы</label>
+              <label class="group-name">Наполнитель:</label>
+              <div class="form-group-style">
+                <label><input type="checkbox" name="filler"> шоколадные</label>
+                <label><input type="checkbox" name="filler"> сахарные присыпки</label>
+                <label><input type="checkbox" name="filler"> фрукты</label>
+                <label><input type="checkbox" name="filler"> сиропы</label>
+                <label><input type="checkbox" name="filler"> джемы</label>
+              </div>
           </div>
-          <button>Применить</button>
+          <button class="form-group-button">Применить</button>
         </div>
       </form>
 
@@ -129,7 +137,8 @@
                 <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">310</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -139,7 +148,8 @@
                 <img src="img/ice-cream__2.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">380</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -148,7 +158,8 @@
               <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
               <div>
                 <span class="catalog-item__price">355</span>
-                <span class="catalog-item__weight">₽/кг</span>
+                <span class="catalog-item__ruble">₽</span>
+                <span class="catalog-item__weight">/кг</span>
               </div>
               <button class="catalog-item__hover-button">Быстрый просмотр</button>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
@@ -158,7 +169,8 @@
                 <img src="img/ice-cream__4.jpg" width="267" height="267" alt="Фото мороженого">
                 <div>
                   <span class="catalog-item__price">415</span>
-                  <span class="catalog-item__weight">₽/кг</span>
+                  <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -168,7 +180,8 @@
             <img src="img/ice-cream__5.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">325</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с брусничным джемом</a></h3>
@@ -178,7 +191,8 @@
             <img src="img/ice-cream__6.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">410</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-черничное с цельными ягодами черники</a></h3>
@@ -188,7 +202,8 @@
             <img src="img/ice-cream__7.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">375</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-лимонное с карамельной присыпкой</a></h3>
@@ -198,7 +213,8 @@
             <img src="img/ice-cream__8.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">320</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с шоколадной стружкой</a></h3>
@@ -208,7 +224,8 @@
             <img src="img/ice-cream__9.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">440</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-ванильное с кусочками шоколада</a></h3>
@@ -218,7 +235,8 @@
             <img src="img/ice-cream__10.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">435</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочноe с ментоловым сиропом</a></h3>
@@ -228,7 +246,8 @@
             <img src="img/ice-cream__11.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">355</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с кусочками черного шоколада</a></h3>
@@ -238,7 +257,8 @@
             <img src="img/ice-cream__12.jpg" width="267" height="267" alt="Фото мороженого">
             <div>
               <span class="catalog-item__price">420</span>
-              <span class="catalog-item__weight">₽/кг</span>
+              <span class="catalog-item__ruble">₽</span>
+                  <span class="catalog-item__weight">/кг</span>
             </div>
           </div>
           <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с мятным сиропом</a></h3>

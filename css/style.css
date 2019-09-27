@@ -1,9 +1,9 @@
 body {
   margin: 0 auto;
-  padding: 10px 27px;
+  padding: 9px 27px;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
-  font-weight: regular;
+  font-weight: 400;
   color: #323232;
   text-transform: none;
   background-color: #849D8F;
@@ -11,18 +11,24 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
+
 /* исправить */
 
-ul {
+.header__menu, .gifts, .catalog, .benefits__list, .social-links, .footer__about, .breadcrumbs, .pagination {
   list-style-type: none;
 }
-/* исправить */
+/* Выше перечислены все ul */
 
 a {
-  text-decoration: none;
   color: #FFFFFF;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.2);
 }
 
 a:hover {
@@ -43,7 +49,7 @@ a:hover {
 
 .header__menu {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   flex-grow: 1;
 }
 
@@ -51,6 +57,15 @@ a:hover {
   display: none;
   background-color: #F8F7F4;
   position: absolute;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header__menu-inner-item--bold {
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(50, 50, 50, .2);
+  padding-bottom: 3px;
 }
 
 .header__menu-inner a {
@@ -64,6 +79,8 @@ a:hover {
 .header__menu-item {
   display: inline-block;
   padding-right: 20px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .header__menu-item:hover .header__menu-inner {
@@ -82,7 +99,7 @@ a:hover {
 
 .header__user-buttons {
   font-size: 14px;
-  font-weight: medium;
+  font-weight: 500;
   padding: 10px;
 }
 
@@ -105,9 +122,15 @@ a:hover {
 .header__user-buttons-basket, .header__enter-link {
   background-color: #9FB3A8;
   background-size: 103px;
+  border: 1px solid transparent;
+  color: white;
   border-radius: 20px;
   display: inline-block;
   padding: 4px 10px;
+}
+
+.header__user-buttons-basket a, .header__user-buttons-enter a {
+  text-decoration: none;
 }
 
 .header__user-buttons-basket img, .header__enter-link img {
@@ -118,7 +141,7 @@ a:hover {
 /* Выше стили для шапки */
 
 .contacts {
-  font-weight: bold;
+  font-weight: 700;
   color: #FFFFFF;
   display: inline-block;
   float: right;
@@ -127,6 +150,10 @@ a:hover {
 
 .contacts__phone {
   font-size: 22px;
+}
+
+.contacts__phone a {
+  text-decoration: none;
 }
 
 .contacts__worktime {
@@ -144,7 +171,7 @@ a:hover {
   }
 
 .carusel__image h2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 60px;
   color: #FFFFFF;
   margin-top: -5em;
@@ -156,13 +183,14 @@ a:hover {
 }
 
 .full-basket {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 32px;
   color: #FFFFFF;
   background-color: #E74A35;
   border-radius: 50px;
   width: 282px;
   padding: 15px 40px;
+  text-decoration: none;
 }
 
 /* Малинка/шоколадка даром */
@@ -175,6 +203,7 @@ a:hover {
 
 .gifts-item {
   display: inline-block;
+  position: relative;
 }
 
 .gifts-item img {
@@ -182,7 +211,7 @@ a:hover {
 }
 
 .gifts-item__content {
-  font-weight: bold;
+  font-weight: 700;
   color: #FFFFFF;
   font-size: 18px;
   margin: 20px;
@@ -194,16 +223,45 @@ a:hover {
 }
 
 .gifts-item__link {
-  display: block;
+  display: flex;
   background-color: #E74A35;
   border-radius: 20px;
-  width: 192px;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  right: 21px;
 }
 
 /* Выше блок с акционными товарами */
 
-.form-group {
+.form {
+  color: white;
+}
+
+.sort_type {
+  color: white;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.form-group-style {
   display: inline-block;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: #9FB3A8;
+  padding: 9px 30px;
+  margin: 10px;
+}
+
+.form-group-button {
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: #9FB3A8;
+  padding: 9px 30px;
+  margin: 10px;
 }
 
 .catalog-item:hover {
@@ -231,23 +289,24 @@ a:hover {
 }
 
 .catalog-item__price {
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.catalog-item__ruble {
+  font-weight: 700;
   font-size: 45px;
 }
 
 .catalog-item__weight {
-  font-weight: bold;
-  font-size: 45px;
+  font-weight: 700;
+  font-size: 30px;
 }
 
 .catalog-item__title {
-  font-weight: medium;
+  font-weight: 500;
   font-size: 16px;
-}
-
-.catalog-item__title-link {
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,.2);
+  text-align: center;
 }
 
 .catalog {
@@ -264,18 +323,30 @@ a:hover {
   top: 0;
 }
 
+.breadcrumbs {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main__title {
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+}
+
 .benefits {
   background-image: url(../img/benefits__background.jpeg);
   border: 1px solid #979797;
   border-radius: 15px;
-  color: black;
+  color: #323232;
   display: block;
   padding: 20px;
   margin: 20px;
 }
 
 .benefits__text {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 24px;
 }
 
@@ -299,6 +370,22 @@ a:hover {
   width: 49px;
   height: 49px;
   display: inline-block;
+}
+
+.benefits__list-item {
+  vertical-align: middle;
+}
+
+.benefits__list-item-text {
+  display: table-cell;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.benefits__list-item-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 10px;
 }
 
 .benefits__list li {
@@ -331,13 +418,13 @@ a:hover {
 
 .article__rubric {
   font-size: 16px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .article__title {
 
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   display: block;
   width: 309px;
   text-decoration: underline;
@@ -359,13 +446,31 @@ a:hover {
 
 .subscribes__text {
   font-size: 16px;
-  font-weight: regular;
+  font-weight: 400;
   margin: 30px;
+  color: #5a5a5a;
 }
 
 .subscribes__form {
   margin: 30px;
   display: block;
+}
+
+.subscribes__form input {
+  color: #999999;
+  padding: 15px;
+  width: 208px;
+}
+
+.subscribes__button {
+  background-color: #E74A35;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-align: center;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 /* Блок с контактами на карте ниже */
@@ -374,34 +479,36 @@ a:hover {
   background-color: #FFFFFF;
   border-radius: 20px;
   width: 305px;
+  color: #323232;
 }
 
 .address__text {
   font-size: 14px;
-  font-weight: regular;
+  font-weight: 400;
   padding: 20px;
   display: inline-block;
 }
 
 .address__text--bold {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .address a {
-  color: #000000;
+  color: #323232;
 }
 
 .address .address__button {
   color: #FFFFFF;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   display: block;
   background-color: #E74A35;
   border-radius: 20px;
   width: 192px;
   text-align: center;
   padding: 30px;
+  text-decoration: none;
 }
 
 /* Блок с контактами на карте выше */
@@ -418,14 +525,20 @@ a:hover {
 
 .footer__about {
   font-size: 13px;
-  font-weight: regular;
+  font-weight: 400;
 }
 
 .footer__developer {
   font-size: 12px;
-  font-weight: regular;
+  font-weight: 400;
   color: #FFFFFF;
 }
+
+.footer__developer__logo {
+  text-decoration: none;
+}
+
+/* убрать подчеркивание сразу после лого разработчика */
 
 .footer__about-item--icon {
   background-image: url(../img/heart.svg);
@@ -436,7 +549,7 @@ a:hover {
 }
 
 .footer__about-link--bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* Пагинация ниже  */
@@ -454,5 +567,9 @@ a:hover {
 
 .pagination__item {
   display: inline;
+}
+
+.pagination__link {
+  text-decoration: none;
 }
 
