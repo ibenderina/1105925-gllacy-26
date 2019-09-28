@@ -692,19 +692,33 @@ a:hover {
 
 /* Блок с контактами на карте выше */
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.social-links {
+  margin: 20px 0;
+}
+
 .social-links__item img {
   display: inline;
   border-radius: 50%;
-  box-shadow: 0 0 4px rgba(0,0,0,.5);
+  border: 2px solid rgba(255, 255, 255, .5);
+  opacity: 0.8;
 }
 
 .social-links__item {
   display: inline;
+  padding-right: 10px;
 }
 
 .footer__about {
   font-size: 13px;
   font-weight: 400;
+  column-count: 2;
+  margin: 20px 0;
 }
 
 .footer__developer {
@@ -715,6 +729,7 @@ a:hover {
 
 .footer__developer__logo {
   text-decoration: none;
+  display: block;
 }
 
 /* убрать подчеркивание сразу после лого разработчика */
@@ -729,6 +744,10 @@ a:hover {
 
 .footer__about-link--bold {
   font-weight: 700;
+}
+
+.footer__about-link {
+line-height: 1.38;
 }
 
 /* Пагинация ниже  */
