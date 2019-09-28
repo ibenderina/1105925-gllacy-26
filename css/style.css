@@ -218,7 +218,7 @@ a.header__menu-inner-link--active {
 
 .header__find-link:hover img,
 .header__enter-link:hover img,
-.header__user-buttons-basket:hover img {
+.header__basket-link:hover img {
   filter: invert(1);
 }
 
@@ -255,11 +255,11 @@ a.header__menu-inner-link--active {
   margin: 20px 15px;
 }
 
-.header__user-buttons-enter:hover .header__enter-field {
+.header__user-buttons-enter:hover .header__enter-field, .header__user-buttons-basket:hover .basket-table {
   display: inline-block;
 }
 
-.header__enter-field {
+.header__enter-field, .basket-table {
   display: none;
   position: absolute;
   border: 1px solid transparent;
@@ -267,6 +267,77 @@ a.header__menu-inner-link--active {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
+
+.basket-table {
+  width: 539px;
+  height: 242px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.basket-table-button, .basket-table__product-sum {
+  position: absolute;
+  right: 20px;
+}
+
+.basket-table-button {
+  bottom: 20px;
+}
+
+.basket-table__product-name, .basket-table__product-cost, .basket-table__product-weight {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.23;
+  text-align: left;
+  color: #323232;
+}
+
+.basket-table__product-price {
+  color: #999999;
+}
+
+.basket-table__product-cost, .basket-table__product-weight {
+  white-space: nowrap;
+}
+
+.basket-table__product {
+  margin-bottom: 30px;
+}
+
+.basket-table__content {
+  border-bottom: 1px solid #cacac7;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  position: relative;
+}
+
+.basket-table__product-sum {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #323232;
+  bottom: 80px;
+}
+
+.basket-table__product-delete-link {
+  color: #323232;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.basket-table__product-delete-link:hover {
+  color: #323232;
+}
+
+.basket-table__product-delete-link {
+  background-image: url(../img/delete_basket.svg);
+  width: 11px;
+  height: 11px;
+  background-repeat: no-repeat;
+  display: block;
+  margin-right: 10px;
+}
+
 
 .header__enter-field a {
   font-size: 13px;
