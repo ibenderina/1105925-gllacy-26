@@ -26,6 +26,34 @@ body {
 
 /* Выше перечислены все ul */
 
+input[type="text"], input[type="password"], input[type="email"] {
+  color: #999999;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999999;
+}
+
+input:hover {
+  border: solid 2px rgba(154, 154, 154, 0.52);
+}
+
+input:focus {
+  outline: solid 2px rgba(46, 136, 228, 0.52);
+}
+
 a {
   color: #FFFFFF;
   text-decoration: underline;
@@ -60,6 +88,7 @@ a:hover {
   position: absolute;
   font-size: 14px;
   font-weight: 400;
+  padding: 0;
 }
 
 .header__menu-inner-item--bold {
@@ -67,10 +96,6 @@ a:hover {
   font-weight: 700;
   border-bottom: 1px solid rgba(50, 50, 50, .2);
   padding-bottom: 3px;
-}
-
-.header__menu-inner a:hover {
-  background-color: #fbded7;
 }
 
 .header__menu-inner a {
@@ -88,7 +113,12 @@ a:hover {
 }
 
 .header__menu-inner-item {
-  padding: 10px;
+  padding: 0;
+}
+
+.header__menu-inner-link {
+  padding: 10px 20px;
+  display: block;
 }
 
 .header__menu-inner {
@@ -99,14 +129,16 @@ a:hover {
   line-height: 160%;
 }
 
-.header__menu-inner a:hover {
+.header__menu-inner-link:hover {
   background-color: #fbded8;
-  display: inline;
+}
+
+.header__menu-inner-link:active {
+  background-color: #f6b5a5;
 }
 
 .header__menu-link:hover {
   color: #323232;
-  border: 1px solid transparent;
   border-radius: 20px;
   background-color: #f7f6f3;
 }
@@ -116,46 +148,161 @@ a:hover {
 }
 
 .header__menu-item--active {
-  background-color: #D07058;
+  background-color: #d07058;
 }
 
 .header__user-buttons {
   font-size: 14px;
   font-weight: 500;
   padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .header__find-link img {
-  padding: 5px;
+  padding: 8px;
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
 }
 
 .header__find-link {
   background-color: rgba(255,255,255,.2);
   border-radius: 50px;
-  height: 27px;
+  display: flex;
+}
+
+.header__find-link:hover {
+  background-color: #f8f7f4;
+}
+
+.header__find-link:hover img, .header__enter-link:hover img, .header__user-buttons-basket:hover img {
+  filter: invert(1);
+}
+
+/* Сделать цвет слова корзина черным */
+
+.header__enter-link:hover,
+.header--basket-link:hover,
+.header__basket-link:hover {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+/* Сделать замену иконке при ховере на черную */
+
+.header__user-buttons-find:hover .header__find-field {
+  display: inline-block;
+}
+
+.header__find-field {
+  display: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  position: absolute;
+}
+
+.header__find-field input {
+  width: 311px;
+  margin: 20px 15px;
+}
+
+.header__user-buttons-enter:hover .header__enter-field {
+  display: inline-block;
+}
+
+.header__enter-field {
+  display: none;
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.header__enter-field a {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+}
+
+.header__enter-field form {
+  display: flex;
+  flex-direction: column;
+  width: 277px;
+  padding: 20px;
+}
+
+.header__enter-field input {
+  margin-bottom: 20px;
+}
+
+.header__enter-field button, .enter-field__forgot-password {
+  display: inline-block;
+  color: #323232;
+  text-decoration: underline;
+}
+
+.header__enter-field button {
+  margin-right: 0;
+}
+
+.enter-field__submit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.enter-field__forgot-password a {
   display: block;
 }
 
+.enter-field__new-user {
+  flex-grow: 1;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323232;
+}
+
+.header__enter-field button {
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  border-radius: 25px;
+  border: 0;
+  text-decoration: none;
+  padding: 15px 25px;
+  text-align: center;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .header__user-buttons-find, .header__user-buttons-enter {
-  display: inline-block;
   padding-right: 10px;
 }
 
-.header__user-buttons-basket, .header__enter-link {
+.header__basket-link,
+.header__enter-link {
   background-color: rgba(255,255,255,.2);
-  background-size: 103px;
   border: 1px solid transparent;
   color: white;
   border-radius: 20px;
-  display: inline-block;
-  padding: 4px 10px;
+  padding: 4px;
 }
 
-.header__user-buttons-basket a, .header__user-buttons-enter a {
+.header__user-buttons a {
   text-decoration: none;
 }
 
-.header__user-buttons-basket img, .header__enter-link img {
+.header__user-buttons-basket img,
+.header__enter-link img {
   display: inline;
   vertical-align: middle;
 }
@@ -295,9 +442,8 @@ a:hover {
 
 .catalog-item:hover {
   background-color:rgba(248, 247, 244, .2);
-  width: 296px;
-  height: 408px;
-  text-align: center;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 }
 
 .catalog-item__hover-button {
@@ -313,8 +459,11 @@ a:hover {
 }
 .catalog__item {
   display: inline-block;
-  width: 270px;
   color: #FFFFFF;
+  width: 296px;
+  height: 408px;
+  text-align: center;
+  padding: 5px 14px;
 }
 
 .catalog-item__price {
@@ -339,7 +488,7 @@ a:hover {
 }
 
 .catalog {
-  width: 1200px;
+  display: flex;
 }
 
 .gifts-item {
@@ -419,6 +568,9 @@ a:hover {
 
 .benefits__list li {
   display: inline-block;
+}
+
+.benefits__list {
   column-count: 2;
 }
 
@@ -483,12 +635,6 @@ a:hover {
 .subscribes__form {
   margin: 30px;
   display: block;
-}
-
-.subscribes__form input {
-  color: #999999;
-  padding: 15px;
-  width: 208px;
 }
 
 .subscribes__button {

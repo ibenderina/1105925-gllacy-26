@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <nav class="header-nav">
-            <img class="header__logo-item" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
+          <img class="header__logo-item" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
           <ul class="header__menu">
             <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
               <ul class="header__menu-inner">
@@ -24,47 +24,50 @@
             <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
           </ul>
-        <div class="header__user-buttons">
-          <div class="header__user-buttons-find">
-            <a class="header__find-link" href="">
-              <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+          <div class="header__user-buttons">
+            <div class="header__user-buttons-find">
+              <a class="header__find-link" href="">
+                <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+                </a>
+                <div class="header__find-field">
+                  <form>
+                    <label class="visually-hidden" for="find-field">Окно поиска</label>
+                    <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                  </form>
+                </div>
+            </div>
+            <div class="header__user-buttons-enter">
+              <a class="header__enter-link" href="">
+                  <img src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
               </a>
-              <div>
-                <form class="header__find-field">
-                  <label class="visually-hidden" for="find-field">Окно поиска</label>
-                  <input class="visually-hidden" type="text" placeholder="Что ищем?" name="find-field" id="find-field">
-                </form>
+              <div class="header__enter-field">
+                  <form>
+                      <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
+                      <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                      <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                      <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
+                      <div class="enter-field__submit">
+                          <button type="submit">Войти</button>
+                          <div class="enter-field__forgot-password">
+                            <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
+                            <a class="enter-field__new-user" href="">Новая регистрация</a>
+                          </div>
+                        </div>
+                  </form>
               </div>
-          </div>
-          <div class="header__user-buttons-enter">
-            <a class="header__enter-link" href="">
-                <img src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
-            </a>
-            <div class="header__enter-field visually-hidden">
-                <form>
-                    <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                    <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
-                    <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
-                    <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
-                    <button type="submit">Войти</button>
-                    <div class="enter-field__forgot-password">
-                      <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
-                      <a class="enter-field__new-user" href="">Новая регистрация</a>
-                    </div>
-                </form>
+            </div>
+            <div class="header__user-buttons-basket">
+              <a class="header__basket-link" href="">
+                <img src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
+              </a>
+              <div></div>
             </div>
           </div>
-          <div class="header__user-buttons-basket">
-            <a class="header--basket-link" href="">
-              <img src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
-            </a>
-          </div>
-        </div>
       </nav>
       <div class="contacts">
         <p class="contacts__worktime">С 10 до 20, ежедневно</p>
         <p class="contacts__phone"><a href="tel: 8 812 450-25-25">8 812 450-25-25</a></p>
-    </div>
+      </div>
     </header>
 
 
@@ -136,6 +139,7 @@
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+              <button class="catalog-item__hover-button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
@@ -147,6 +151,7 @@
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
+              <button class="catalog-item__hover-button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
@@ -158,6 +163,7 @@
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+              <button class="catalog-item__hover-button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
@@ -169,6 +175,7 @@
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное крем-брюле с карамельной подливкой</a></h3>
+              <button class="catalog-item__hover-button">Быстрый просмотр</button>
             </li>
             </ul>
     </main>
