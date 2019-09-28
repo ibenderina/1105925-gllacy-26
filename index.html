@@ -47,7 +47,7 @@
                       <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
                       <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
                       <div class="enter-field__submit">
-                          <button type="submit">Войти</button>
+                          <button class="button" type="submit">Войти</button>
                           <div class="enter-field__forgot-password">
                             <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
                             <a class="enter-field__new-user" href="">Новая регистрация</a>
@@ -72,7 +72,7 @@
 
 
 
-    <!--  Все, что выше этого комментария КРОМЕ ЛОГО, одинаково для всех страниц сайта, можно просто копировать -->
+    <!--  СВЕРХУ ШАПКА -->
 
 
 
@@ -84,7 +84,7 @@
         <label class="visually-hidden" for="usermail">Введите электронную почту</label>
         <input type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
         <textarea rows="7" placeholder="Напишите что-нибудь..."></textarea>
-        <button type="submit">Отправить</button>
+        <button class="button" type="submit">Отправить</button>
       </form>
     </div>
 
@@ -106,7 +106,7 @@
               <img src="img/main_ice-cream__2.png" width="333" height="519" alt="Фото мороженки">
               <h2>Крем-брюле и пломбир <br>
               с малиновым джемом</h2>
-              <a class="full-basket" href="">Давайте оба!</a>
+              <a class="button" class="full-basket" href="">Давайте оба!</a>
             </div>
           </div>
         </div>
@@ -132,55 +132,53 @@
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">310</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__2.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">380</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">355</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__4.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">415</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное крем-брюле с карамельной подливкой</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             </ul>
     </main>
-
-
     <section class="benefits">
       <p class="benefits__text">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="benefits__list">
@@ -230,23 +228,24 @@
       <form class="subscribes__form">
         <label class="visually-hidden" for="subscribes-email">Введите электронную почту для подписки на рассылку</label>
         <input type="email" placeholder="Электронная почта" name="subscribes-email" id="subscribes-email">
-        <button class="subscribes__button">Отправить</button>
+        <button class="subscribes__button button">Отправить</button>
       </form>
     </section>
     <section class="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AXWUbK2nw6gR2-xpv16dDyL_sRWGopB5q&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
-    </section>
-    <section class="address">
-      <p class="address__text">Адрес главного офиса  и офлайн-магазина: </p>
-      <p class="address__text address__text--bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-      <p class="address__text">Для заказов по телефону:</p>
-      <p class="address__text address__text--bold">
-        <a href="tel: 8 812 450-25-25">8 812 450-25-25 </a>(с 10 до 20 ежедневно) </p>
-      <a class="address__button" href="">Форма обратной связи</a>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AXWUbK2nw6gR2-xpv16dDyL_sRWGopB5q&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+      <div class="address">
+        <p class="address__text">Адрес главного офиса<br>  и офлайн-магазина: </p>
+        <p class="address__text address__text--bold address__text--br">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
+        <p class="address__text">Для заказов по телефону:</p>
+        <p class="address__text address__text--bold">
+          <a href="tel: 8 812 450-25-25">8 812 450-25-25 </a> </p><br>
+        <p class="address__text">(с 10 до 20 ежедневно)</p>
+        <a class="address__button button" href="">Форма обратной связи</a>
+      </div>
     </section>
 
 
-    <!-- Все, что ниже этого комментария, одинаково для всех страниц сайта -->
+    <!-- Все, что ниже этого комментария, одинаково для всех страниц сайта, ПОДВАЛ -->
 
 
     <footer class="footer">
@@ -264,16 +263,20 @@
             <a class="social-links__link" href="">
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
         </ul>
-        <ul class="footer__about">
-              <li class="footer__about-item">
-                <i class="footer__about-item--icon"></i>
-                <a class="footer__about-link footer__about-link--bold" href="">Для поставщиков</a>
-              </li>
-              <li class="footer__about-item"><a class="footer__about-link" href="">О производстве</a>
-              </li>
-              <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>
-              <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
-        </ul>
+        <div>
+          <ul class="footer__about">
+            <li class="footer__about-item">
+              <i class="footer__about-item--icon"></i>
+              <a class="footer__about-link footer__about-link--bold" href="">Для поставщиков</a>
+            </li>
+            <li class="footer__about-item"><a class="footer__about-link" href="">О производстве</a>
+            </li>
+          </ul>
+          <ul class="footer__about">
+            <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>
+            <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
+          </ul>
+        </div>
         <div>
           <a class="footer__developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип разработчика">

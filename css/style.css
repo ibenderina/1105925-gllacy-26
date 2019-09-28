@@ -18,7 +18,29 @@ body {
   margin: -1px;
 }
 
-/* исправить */
+.button {
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  border-radius: 25px;
+  border: 0;
+  text-decoration: none;
+  padding: 15px 25px;
+  text-align: center;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.button:hover {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+  color: #fefefe;
+}
+
+.button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
+}
 
 .header__menu, .gifts, .catalog, .benefits__list, .social-links, .footer__about, .breadcrumbs, .pagination, .header__menu-inner {
   list-style-type: none;
@@ -61,7 +83,7 @@ a {
 }
 
 a:hover {
-  color: #e84d37;
+  color: #ffbc9e;
 }
 
 /* Ниже стили для шапки */
@@ -122,7 +144,6 @@ a:hover {
 }
 
 .header__menu-inner {
-  border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
@@ -131,24 +152,43 @@ a:hover {
 
 .header__menu-inner-link:hover {
   background-color: #fbded8;
+  color: #323232;
+  text-decoration: none;
+}
+
+.header__menu-inner-item:first-child .header__menu-inner-link {
+  border-radius: 5px 5px 0 0;
+}
+
+.header__menu-inner-item:last-child .header__menu-inner-link {
+  border-radius: 0 0 5px 5px;
 }
 
 .header__menu-inner-link:active {
   background-color: #f6b5a5;
+  text-decoration: none;
+}
+
+a.header__menu-inner-link--active {
+  background-color: #d07058;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header__menu-link:hover {
   color: #323232;
-  border-radius: 20px;
   background-color: #f7f6f3;
 }
 
 .header__menu-link {
   padding: 4px 13px;
+  border-radius: 20px;
 }
 
-.header__menu-item--active {
+.header__menu-link--active {
   background-color: #d07058;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header__user-buttons {
@@ -176,8 +216,14 @@ a:hover {
   background-color: #f8f7f4;
 }
 
-.header__find-link:hover img, .header__enter-link:hover img, .header__user-buttons-basket:hover img {
+.header__find-link:hover img,
+.header__enter-link:hover img,
+.header__user-buttons-basket:hover img {
   filter: invert(1);
+}
+
+.header__basket-link-full:hover img {
+  filter: none;
 }
 
 /* Сделать цвет слова корзина черным */
@@ -417,18 +463,16 @@ a:hover {
 
 .sort_type {
   color: white;
-  border: 1px solid transparent;
   background-color: transparent;
 }
 
 .form-group-style {
   display: inline-block;
   color: white;
-  border: 2px solid white;
   border-radius: 20px;
   background-color: #9FB3A8;
-  padding: 9px 30px;
-  margin: 10px;
+  padding: 9px 20px;
+  margin: 8px 0;
 }
 
 .form-group-button {
@@ -436,14 +480,27 @@ a:hover {
   border: 2px solid white;
   border-radius: 20px;
   background-color: #9FB3A8;
-  padding: 9px 30px;
+  padding: 9px 20px;
   margin: 10px;
+}
+
+.form-group > label {
+  display: block;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .catalog-item:hover {
   background-color:rgba(248, 247, 244, .2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  z-index: 2;
 }
 
 .catalog-item__hover-button {
@@ -451,7 +508,7 @@ a:hover {
 }
 
 .catalog-item:hover .catalog-item__hover-button {
-  display: block;
+  display: inline-block;
 }
 
 .catalog-item img {
@@ -460,10 +517,16 @@ a:hover {
 .catalog__item {
   display: inline-block;
   color: #FFFFFF;
-  width: 296px;
-  height: 408px;
+  width: 272px;
+  height: 405px;
   text-align: center;
   padding: 5px 14px;
+  margin-top: -3em;
+}
+
+.catalog-item-cost {
+  margin-top: -60px;
+  text-align: left;
 }
 
 .catalog-item__price {
@@ -489,6 +552,8 @@ a:hover {
 
 .catalog {
   display: flex;
+  padding: 3em 0 0 0;
+  flex-wrap: wrap;
 }
 
 .gifts-item {
@@ -505,6 +570,16 @@ a:hover {
   color: white;
   font-size: 14px;
   font-weight: 400;
+  display: block;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  display: inline;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+ content: " » ";
 }
 
 .main__title {
@@ -652,23 +727,39 @@ a:hover {
 
 /* Блок с контактами на карте ниже */
 
+.map {
+  position: relative;
+  padding: 10px;
+}
+
 .address {
+  position: absolute;
   background-color: #FFFFFF;
   border-radius: 20px;
   width: 305px;
   color: #323232;
+  top: 63px;
+  right: 27px;
+  line-height: 1.43;
+  text-align: left;
+  padding: 32px 25px;
 }
 
 .address__text {
   font-size: 14px;
   font-weight: 400;
-  padding: 20px;
   display: inline-block;
+  margin: 0;
+  padding-bottom: 5px;
 }
 
 .address__text--bold {
   font-size: 18px;
   font-weight: 700;
+}
+
+.address__text--br {
+  padding-bottom: 15px;
 }
 
 .address a {
@@ -683,10 +774,10 @@ a:hover {
   background-color: rgba (172, 16, 0, 0.64);
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 20px;
-  width: 192px;
+  border-radius: 50px;
   text-align: center;
-  padding: 30px;
+  padding: 7px 10px;
+  margin-top: 10px;
   text-decoration: none;
 }
 
@@ -709,6 +800,15 @@ a:hover {
   opacity: 0.8;
 }
 
+.social-links__item:hover img {
+  opacity: 1;
+}
+
+.social-links__item:active img {
+  opacity: 0.7;
+  border: 2px solid rgba(255, 255, 255, .6);
+}
+
 .social-links__item {
   display: inline;
   padding-right: 10px;
@@ -717,8 +817,9 @@ a:hover {
 .footer__about {
   font-size: 13px;
   font-weight: 400;
-  column-count: 2;
   margin: 20px 0;
+  display: inline-block;
+  padding-left: 20px;
 }
 
 .footer__developer {
@@ -732,7 +833,10 @@ a:hover {
   display: block;
 }
 
-/* убрать подчеркивание сразу после лого разработчика */
+.footer__about-item {
+  position: relative;
+}
+
 
 .footer__about-item--icon {
   background-image: url(../img/heart.svg);
@@ -740,6 +844,8 @@ a:hover {
   width: 15px;
   height: 13px;
   display: inline-block;
+  position: absolute;
+  left: -1.3em;
 }
 
 .footer__about-link--bold {
@@ -750,24 +856,39 @@ a:hover {
 line-height: 1.38;
 }
 
-/* Пагинация ниже  */
+/* ВНИЗУ ПАГИНАЦИЯ  */
 
-.pagination__item--active {
+.pagination__link--active,
+.pagination__item:active .pagination__link {
   background-color: #FFFFFF;
-  border-radius: 50%;
+  border-radius: 50px;
   display: inline-block;
   width: 29px;
   height: 28px;
   text-align: center;
   line-height: 28px;
-  color: #353535;
+  font-size: 16px;
+  font-weight: 500;
+  color: #323232;
 }
 
 .pagination__item {
-  display: inline;
+  display: inline-block;
+  padding-right: 11px;
+}
+
+.pagination__link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination__link {
   text-decoration: none;
+  width: 29px;
+  line-height: 28px;
+  display: inline-block;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
-

@@ -14,10 +14,11 @@
               <img class="header__logo-item" src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
             </a>
           <ul class="header__menu">
-            <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a>
+            <li class="header__menu-item">
+              <a class="header__menu-link header__menu-link--active" href="catalog.html">Каталог</a>
               <ul class="header__menu-inner">
                 <li class="header__menu-inner-item header__menu-inner-item--bold"><a class="header__menu-inner-link" href="">Новинки</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="catalog.html">Сливочное</a></li>
+                <li class="header__menu-inner-item"><a class="header__menu-inner-link header__menu-inner-link--active" href="catalog.html">Сливочное</a></li>
                 <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
                 <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
                 <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
@@ -49,7 +50,7 @@
                     <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
                     <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
                     <div class="enter-field__submit">
-                        <button type="submit">Войти</button>
+                        <button class="button" type="submit">Войти</button>
                         <div class="enter-field__forgot-password">
                           <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
                           <a class="enter-field__new-user" href="">Новая регистрация</a>
@@ -59,8 +60,8 @@
             </div>
           </div>
           <div class="header__user-buttons-basket">
-            <a class="header__basket-link" href="">
-              <img src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
+            <a class="header__basket-link header__basket-link-full" href="">
+              <img src="img/basket-red.svg" width="21" height="20" alt="Корзина"> 2 товара
             </a>
             <div></div>
           </div>
@@ -138,144 +139,144 @@
           <li class="catalog__item catalog-item">
               <div class="">
                 <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">310</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__2.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">380</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-кофейное с кусочками шоколада</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
-              <div>
+              <div class="catalog-item-cost">
                 <span class="catalog-item__price">355</span>
                 <span class="catalog-item__ruble">₽</span>
                 <span class="catalog-item__weight">/кг</span>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__4.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">415</span>
                   <span class="catalog-item__ruble">₽</span>
                   <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное крем-брюле с карамельной подливкой</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__5.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">325</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с брусничным джемом</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__6.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">410</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-черничное с цельными ягодами черники</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__7.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">375</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-лимонное с карамельной присыпкой</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__8.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">320</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с шоколадной стружкой</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__9.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">440</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочно-ванильное с кусочками шоколада</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__10.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">435</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочноe с ментоловым сиропом</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__11.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">355</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с кусочками черного шоколада</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
             <li class="catalog__item catalog-item">
               <div>
                 <img src="img/ice-cream__12.jpg" width="267" height="267" alt="Фото мороженого">
-                <div>
+                <div class="catalog-item-cost">
                   <span class="catalog-item__price">420</span>
                   <span class="catalog-item__ruble">₽</span>
                       <span class="catalog-item__weight">/кг</span>
                 </div>
               </div>
               <h3 class="catalog-item__title"><a class="catalog-item__title-link">Сливочное с мятным сиропом</a></h3>
-              <button class="catalog-item__hover-button">Быстрый просмотр</button>
+              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
             </li>
           </ul>
 
@@ -283,7 +284,7 @@
 
       <ul class="pagination">
         <li class="pagination__item"><a class="pagination__link" href="">&lt;</a></li>
-        <li class="pagination__item"><a class="pagination__link pagination__item--active" href="">1</a></li>
+        <li class="pagination__item"><a class="pagination__link pagination__link--active" href="">1</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">4</a></li>
@@ -311,22 +312,26 @@
             <a class="social-links__link" href="">
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
         </ul>
-        <ul class="footer__about">
+        <div>
+          <ul class="footer__about">
             <li class="footer__about-item">
               <i class="footer__about-item--icon"></i>
-              <a class="footer__about-link" href="">Для поставщиков</a>
+              <a class="footer__about-link footer__about-link--bold" href="">Для поставщиков</a>
             </li>
-            <li><a class="footer__about-link" href="">О производстве</a>
+            <li class="footer__about-item"><a class="footer__about-link" href="">О производстве</a>
             </li>
-        </ul>
-        <ul class="footer__about">
-          <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>
-          <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
-        </ul>
-        <a class="footer__developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип разработчика">
-        </a>
-        <span class="footer__developer">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>
+          </ul>
+          <ul class="footer__about">
+            <li class="footer__about-item"><a class="footer__about-link" href="">Наши документы</a></li>
+            <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
+          </ul>
+        </div>
+        <div>
+          <a class="footer__developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип разработчика">
+          </a>
+          <span class="footer__developer">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>
+        </div>
       </footer>
     </body>
   </html>
