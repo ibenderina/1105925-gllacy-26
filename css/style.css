@@ -724,6 +724,10 @@ a.header__menu-inner-link--active {
   column-count: 2;
 }
 
+.articles__stock {
+  display: flex;
+}
+
 .article {
   position: relative;
   background-image: url(../img/articles__background.jpeg);
