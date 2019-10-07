@@ -10,12 +10,22 @@ body {
   width: 1200px;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -105,15 +115,24 @@ a:hover {
   font-size: 16px;
   font-weight: 700;
   flex-grow: 1;
+  padding-left: 10px;
 }
 
 .header__menu-inner {
   display: none;
   background-color: #F8F7F4;
-  position: absolute;
   font-size: 14px;
   font-weight: 400;
+  line-height: 16px;
   padding: 0;
+  white-space: nowrap;
+}
+
+.header__menu-inner--style {
+  padding: 10px;
+  position: absolute;
+  left: -15px;
+  top: 15px;
 }
 
 .header__menu-inner-item--bold {
@@ -131,6 +150,7 @@ a:hover {
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
+  position: relative;
 }
 
 .header__menu-item:hover .header__menu-inner {
@@ -142,7 +162,7 @@ a:hover {
 }
 
 .header__menu-inner-link {
-  padding: 10px 20px;
+  padding: 7px 20px;
   display: block;
 }
 
@@ -178,7 +198,7 @@ a.header__menu-inner-link--active {
   color: #ffffff;
 }
 
-.header__menu-link:hover {
+.header__menu-item:hover .header__menu-link {
   color: #323232;
   background-color: #f7f6f3;
   text-decoration: none;
@@ -223,13 +243,13 @@ a.header__menu-inner-link--active {
   display: flex;
 }
 
-.header__find-link:hover {
+.header__user-buttons-find:hover .header__find-link {
   background-color: #f8f7f4;
 }
 
-.header__find-link:hover img,
-.header__enter-link:hover img,
-.header__basket-link:hover img {
+.header__user-buttons-find:hover .header__find-link img,
+.header__user-buttons-enter:hover .header__enter-link img,
+.header__user-buttons-basket:hover .header__basket-link:not(.header__basket-link-full) img {
   filter: invert(1);
 }
 
@@ -237,9 +257,9 @@ a.header__menu-inner-link--active {
   filter: none;
 }
 
-.header__enter-link:hover,
+.header__user-buttons-enter:hover .header__enter-link,
 .header--basket-link:hover,
-.header__basket-link:hover {
+.header__user-buttons-basket:hover .header__basket-link {
   background-color: #f8f7f4;
   color: #323232;
 }
@@ -254,7 +274,6 @@ a.header__menu-inner-link--active {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
-  position: absolute;
 }
 
 .header__find-field input {
@@ -268,7 +287,6 @@ a.header__menu-inner-link--active {
 
 .header__enter-field, .basket-table {
   display: none;
-  position: absolute;
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -277,13 +295,15 @@ a.header__menu-inner-link--active {
 
 .basket-table {
   width: 539px;
-  height: 242px;
   border-radius: 5px;
   padding: 20px;
 }
 
+.basket-table--style {
+  text-align: right;
+}
+
 .basket-table-button, .basket-table__product-sum {
-  position: absolute;
   right: 20px;
 }
 
@@ -314,7 +334,6 @@ a.header__menu-inner-link--active {
 .basket-table__content {
   border-bottom: 1px solid #cacac7;
   border-collapse: separate;
-  border-spacing: 0 20px;
   position: relative;
 }
 
@@ -403,6 +422,15 @@ a.header__menu-inner-link--active {
 
 .header__user-buttons-find, .header__user-buttons-enter {
   padding-right: 10px;
+  position: relative;
+}
+
+.header__user-buttons--style {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 .header__basket-link,
@@ -411,17 +439,22 @@ a.header__menu-inner-link--active {
   border: 1px solid transparent;
   color: white;
   border-radius: 20px;
-  padding: 4px;
+  padding: 9px 15px;
 }
 
 .header__user-buttons a {
   text-decoration: none;
 }
 
+.header__user-buttons-basket {
+  position: relative;
+}
+
 .header__user-buttons-basket img,
 .header__enter-link img {
   display: inline;
   vertical-align: middle;
+  padding: 8px 0;
 }
 
 /* Выше стили для шапки */
@@ -451,7 +484,7 @@ a.header__menu-inner-link--active {
 .carusel {
   text-align: center;
   padding: 10em 0;
-  margin-top: -15em;
+  margin-top: -275px;
   background-repeat: no-repeat;
   background-image: radial-gradient(circle closest-side, rgba(255,255,255,.5), transparent);
   }
@@ -514,6 +547,45 @@ a.header__menu-inner-link--active {
   color: white;
 }
 
+.form-group-style {
+  display: inline-block;
+  color: white;
+  border-radius: 20px;
+  background-color: #9FB3A8;
+  padding: 9px 20px;
+  margin: 8px 0;
+  position: relative;
+}
+
+/* РАЗОБРАТЬСЯ ТУТ С РАДИО И ЧЕКБОКСАМИ!!! */
+
+.form-group__fat-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -1px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
+.form-group__fat-radio:disabled + label {
+  color: #000000;
+  opacity: 0.5;
+}
+
+.form-group__fat-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -36px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
 .sort_type {
   color: white;
   background-color: transparent;
@@ -522,15 +594,6 @@ a.header__menu-inner-link--active {
 
 .sort_type:hover {
   color: #323232;
-}
-
-.form-group-style {
-  display: inline-block;
-  color: white;
-  border-radius: 20px;
-  background-color: #9FB3A8;
-  padding: 9px 20px;
-  margin: 8px 0;
 }
 
 .form-group input:hover {
@@ -979,4 +1042,23 @@ line-height: 1.38;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
+}
+
+.call-back--wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: none;
+}
+
+.call-back--wrapper.active {
+  display: block;
+}
+
+.call-back {
+
 }

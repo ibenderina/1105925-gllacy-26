@@ -16,13 +16,15 @@
           <ul class="header__menu">
             <li class="header__menu-item">
               <a class="header__menu-link header__menu-link--active" href="catalog.html">Каталог</a>
-              <ul class="header__menu-inner">
-                <li class="header__menu-inner-item header__menu-inner-item--bold"><a class="header__menu-inner-link" href="">Новинки</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link header__menu-inner-link--active" href="catalog.html">Сливочное</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
-                <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
-              </ul>
+              <div class="header__menu-inner--style">
+                <ul class="header__menu-inner">
+                  <li class="header__menu-inner-item header__menu-inner-item--bold"><a class="header__menu-inner-link" href="">Новинки</a></li>
+                  <li class="header__menu-inner-item"><a class="header__menu-inner-link header__menu-inner-link--active" href="catalog.html">Сливочное</a></li>
+                  <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Щербеты</a></li>
+                  <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Фруктовый лед</a></li>
+                  <li class="header__menu-inner-item"><a class="header__menu-inner-link" href="">Мелорин</a></li>
+                </ul>
+              </div>
             </li>
             <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
@@ -32,58 +34,66 @@
             <a class="header__find-link" href="">
               <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
               </a>
-              <div class="header__find-field">
-                <form>
-                  <label class="visually-hidden" for="find-field">Окно поиска</label>
-                  <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
-                </form>
+              <div class="header__user-buttons--style">
+                <div class="header__find-field">
+                  <form>
+                    <label class="visually-hidden" for="find-field">Окно поиска</label>
+                    <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                  </form>
+                </div>
               </div>
           </div>
           <div class="header__user-buttons-enter">
             <a class="header__enter-link" href="">
                 <img src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
             </a>
-            <div class="header__enter-field">
-                <form>
-                    <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                    <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
-                    <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
-                    <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
-                    <div class="enter-field__submit">
-                        <button class="button" type="submit">Войти</button>
-                        <div class="enter-field__forgot-password">
-                          <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
-                          <a class="enter-field__new-user" href="">Новая регистрация</a>
+            <div class="header__user-buttons--style">
+              <div class="header__enter-field">
+                  <form>
+                      <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
+                      <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                      <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                      <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
+                      <div class="enter-field__submit">
+                          <button class="button" type="submit">Войти</button>
+                          <div class="enter-field__forgot-password">
+                            <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
+                            <a class="enter-field__new-user" href="">Новая регистрация</a>
+                          </div>
                         </div>
-                      </div>
-                </form>
+                  </form>
+              </div>
             </div>
           </div>
           <div class="header__user-buttons-basket">
             <a class="header__basket-link header__basket-link-full" href="">
               <img src="img/basket-red.svg" width="21" height="20" alt="Корзина"> 2 товара
             </a>
-            <div class="basket-table">
-              <form>
-                <table class="basket-table__content">
-                  <tr class="basket-table__product">
-                    <td class="basket-table__product-delete"><a class="basket-table__product-delete-link" href="" aria-label="Удалить товар"></a></td>
-                    <td class="basket-table__product-image"><img src="img/mini__ice-cream__1.jpeg" width="33" height="33" alt="иконка мороженого"></td>
-                    <td class="basket-table__product-name">Пломбир с апельсиновым джемом</td>
-                    <td class="basket-table__product-weight">1,5 кг <span class="basket-table__product-price">х 200 руб.</span></td>
-                    <td class="basket-table__product-cost">300 руб.</td>
-                  </tr>
-                  <tr class="basket-table__product">
+            <div class="header__user-buttons--style">
+              <div class="basket-table">
+                <form>
+                  <table class="basket-table__content">
+                    <tr class="basket-table__product">
                       <td class="basket-table__product-delete"><a class="basket-table__product-delete-link" href="" aria-label="Удалить товар"></a></td>
-                      <td class="basket-table__product-image"><img src="img/mini__ice-cream__2.jpeg" width="33" height="33" alt="иконка мороженого"></td>
-                      <td class="basket-table__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                      <td class="basket-table__product-weight">1,5 кг <span class="basket-table__product-price">х 300 руб.</span></td>
-                      <td class="basket-table__product-cost">450  руб.</td>
+                      <td class="basket-table__product-image"><img src="img/mini__ice-cream__1.jpeg" width="33" height="33" alt="иконка мороженого"></td>
+                      <td class="basket-table__product-name">Пломбир с апельсиновым джемом</td>
+                      <td class="basket-table__product-weight">1,5 кг <span class="basket-table__product-price">х 200 руб.</span></td>
+                      <td class="basket-table__product-cost">300 руб.</td>
                     </tr>
-                </table>
-                  <p class="basket-table__product-sum"><b>Итого: 750 руб.</b></p>
-                  <button class="basket-table-button button" type="submit" name="basket-table__order">Оформить заказ</button>
-              </form>
+                    <tr class="basket-table__product">
+                        <td class="basket-table__product-delete"><a class="basket-table__product-delete-link" href="" aria-label="Удалить товар"></a></td>
+                        <td class="basket-table__product-image"><img src="img/mini__ice-cream__2.jpeg" width="33" height="33" alt="иконка мороженого"></td>
+                        <td class="basket-table__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                        <td class="basket-table__product-weight">1,5 кг <span class="basket-table__product-price">х 300 руб.</span></td>
+                        <td class="basket-table__product-cost">450  руб.</td>
+                      </tr>
+                  </table>
+                  <div class="basket-table--style">
+                    <p class="basket-table__product-sum"><b>Итого: 750 руб.</b></p>
+                    <button class="basket-table-button button" type="submit" name="basket-table__order">Оформить заказ</button>
+                  </div>
+                </form>
+            </div>
           </div>
         </div>
         </div>
@@ -132,10 +142,10 @@
           <div class="form-group">
               <label>Жирность:</label>
               <div class="form-group-style">
-                <label><input type="radio" name="fat"> 0%</label>
-                <label><input type="radio" name="fat"> до 10%</label>
-                <label><input type="radio" name="fat"> до 30%</label>
-                <label><input type="radio" name="fat"> выше 30%</label>
+                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat"><label for="fat"> 0%</label>
+                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat"><label for="fat"> до 10%</label>
+                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat"><label for="fat"> до 30%</label>
+                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat"><label for="fat"> выше 30%</label>
               </div>
           </div>
         </div>
