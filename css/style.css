@@ -2,13 +2,11 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 9px 27px;
-
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #323232;
   text-transform: none;
-
   background-color: #849D8F;
 }
 
@@ -16,17 +14,14 @@ body {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -45,7 +40,6 @@ input[type="radio"].visually-hidden {
 .button:hover {
   text-decoration: none;
   color: #fefefe;
-
   box-shadow: 0 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
                     linear-gradient(to top, #e74a35, #f26843);
@@ -85,7 +79,8 @@ input[type="email"] {
   color: #323232;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -128,7 +123,6 @@ a:hover {
 .header__menu {
   flex-grow: 1;
   padding-left: 10px;
-
   font-size: 16px;
   font-weight: 700;
 }
@@ -136,12 +130,10 @@ a:hover {
 .header__menu-inner {
   display: none;
   padding: 0;
-
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   white-space: nowrap;
-
   background-color: #F8F7F4;
 }
 
@@ -149,16 +141,13 @@ a:hover {
   position: absolute;
   left: -15px;
   top: 15px;
-
   padding: 10px;
 }
 
 .header__menu-inner-item--bold {
   padding-bottom: 3px;
-
   font-size: 14px;
   font-weight: 700;
-
   border-bottom: 1px solid rgba(50, 50, 50, .2);
 }
 
@@ -168,9 +157,7 @@ a:hover {
 
 .header__menu-item {
   position: relative;
-
   display: inline-block;
-
   font-size: 16px;
   font-weight: 700;
 }
@@ -541,9 +528,7 @@ a.header__menu-inner-link--active {
 .carousel {
   padding: 85px 0;
   margin-top: -183px;
-
   text-align: center;
-
   background-repeat: no-repeat;
   background-image: radial-gradient(circle closest-side, rgba(255,255,255,.5), transparent);
 }
@@ -551,9 +536,7 @@ a.header__menu-inner-link--active {
 .carousel__slide {
   height: 584px;
   margin-top: 50px;
-
   text-align: center;
-
   transition: background-image 1s;
   background-image: url(../img/carousel/12.png);
   background-repeat: no-repeat;
@@ -595,9 +578,9 @@ a.header__menu-inner-link--active {
   cursor: pointer;
 }
 
-#product-1:checked ~ .carousel__slider label[for="product-1"],
-#product-2:checked ~ .carousel__slider label[for="product-2"],
-#product-3:checked ~ .carousel__slider label[for="product-3"] {
+.product-1:checked ~ .carousel__slider label[for="product-1"],
+.product-2:checked ~ .carousel__slider label[for="product-2"],
+.product-3:checked ~ .carousel__slider label[for="product-3"] {
   background-color: #ffffff;
 }
 
@@ -605,31 +588,29 @@ a.header__menu-inner-link--active {
   top: 0;
   left: 0;
   z-index: -1;
-
   position: fixed;
   width: 100%;
   height: 100%;
-
   transition: background-color 1s;
 }
 
-#product-1:checked ~ .carousel__bg-helper {
+.product-1:checked ~ .carousel__bg-helper {
   background-color: #849d8f;
 }
-#product-2:checked ~ .carousel__bg-helper {
+.product-2:checked ~ .carousel__bg-helper {
   background-color: #8996a6;
 }
-#product-3:checked ~ .carousel__bg-helper {
+.product-3:checked ~ .carousel__bg-helper {
   background-color: #9d8b84;
 }
 
-#product-1:checked ~ .carousel__slide {
+.product-1:checked ~ .carousel__slide {
   background-image: url(../img/carousel/12.png);
 }
-#product-2:checked ~ .carousel__slide {
+.product-2:checked ~ .carousel__slide {
   background-image: url(../img/carousel/34.png);
 }
-#product-3:checked ~ .carousel__slide {
+.product-3:checked ~ .carousel__slide {
   background-image: url(../img/carousel/56.png);
 }
 
@@ -645,7 +626,6 @@ a.header__menu-inner-link--active {
 
 .gifts-item {
   position: relative;
-
   display: inline-block;
 }
 
@@ -663,7 +643,6 @@ a.header__menu-inner-link--active {
 
 .gifts-item__title {
   margin: 0;
-
   font-size: 35px;
 }
 
@@ -671,10 +650,8 @@ a.header__menu-inner-link--active {
   position: absolute;
   right: 21px;
   bottom: 23px;
-
   display: flex;
   padding: 14px 21px;
-
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -702,16 +679,13 @@ a.header__menu-inner-link--active {
 
 .form-group__fat-radio + label::before {
   content: "";
-
+  opacity: 0.8;
   left: -42px;
   top: -1px;
-
   display: inline-block;
   width: 22px;
   height: 22px;
-
   vertical-align: bottom;
-
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -720,15 +694,14 @@ a.header__menu-inner-link--active {
 
 .form-group__fat-radio + label {
   position: relative;
-  opacity: 0.8;
 }
 
 .form-group__fat-radio:checked + label::before {
   background-image: url(../img/radio-on.svg);
 }
 
-.form-group__fat-radio:hover + label::before,
-.form-group__filler-checkbox:hover + label::before {
+.form-group__fat-radio:not(:disabled):hover + label::before,
+.form-group__filler-checkbox:not(:disabled):hover + label::before {
   opacity: 1;
 }
 
@@ -739,16 +712,13 @@ a.header__menu-inner-link--active {
 
 .form-group__filler-checkbox + label::before {
   content: "";
-
+  opacity: 0.8;
   left: -42px;
   top: -1px;
-
   display: inline-block;
   width: 24px;
   height: 20px;
-
   vertical-align: top;
-
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -757,7 +727,6 @@ a.header__menu-inner-link--active {
 
 .form-group__filler-checkbox + label {
   position: relative;
-  opacity: 0.8;
 }
 
 .form-group__filler-checkbox:disabled + label::before {
@@ -1355,17 +1324,19 @@ a.header__menu-inner-link--active {
 
 .call-back {
   position: absolute;
-  left: 40%;
-  top: 40%;
+  left: 30%;
+  top: 10%;
   min-width: 478px;
   background-color: #f8f7f4;
   padding: 20px 24px;
   border-radius: 10px;
+  z-index: 999999;
 }
 
 .call-back__text {
   font-size: 24px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .call-back__input {
@@ -1376,10 +1347,12 @@ a.header__menu-inner-link--active {
 
 .call-back__textarea {
   display: block;
-  width: 100%;
+  min-width: 90%;
   margin-bottom: 25px;
+  padding: 15px;
 }
 
 .call-back__button {
   padding: 14px 24px;
+  float: right;
 }
