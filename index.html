@@ -52,7 +52,7 @@
                         <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
                         <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
                         <div class="enter-field__submit">
-                            <button class="button" type="submit">Войти</button>
+                            <button class="enter-field__button button" type="submit">Войти</button>
                             <div class="enter-field__forgot-password">
                               <a class="enter-field__password-reminder" href="">Забыли пароль?</a>
                               <a class="enter-field__new-user" href="">Новая регистрация</a>
@@ -66,30 +66,6 @@
               <a class="header__basket-link" href="">
                 <img src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
               </a>
-              <!-- <div class="header__user-buttons--style">
-                <div class="basket-table">
-                    <form>
-                      <table class="basket-table__content">
-                        <tr class="basket-table__product">
-                          <td class="basket-table__product-delete"><a class="basket-table__product-delete-link" href="" aria-label="Удалить товар"></a></td>
-                          <td class="basket-table__product-image"><img src="img/mini__ice-cream__1.jpeg" width="33" height="33" alt="иконка мороженого"></td>
-                          <td class="basket-table__product-name">Пломбир с апельсиновым джемом</td>
-                          <td class="basket-table__product-weight">1,5 кг <span class="basket-table__product-price">х 200 руб.</span></td>
-                          <td class="basket-table__product-cost">300 руб.</td>
-                        </tr>
-                        <tr class="basket-table__product">
-                            <td class="basket-table__product-delete"><a class="basket-table__product-delete-link" href="" aria-label="Удалить товар"></a></td>
-                            <td class="basket-table__product-image"><img src="img/mini__ice-cream__2.jpeg" width="33" height="33" alt="иконка мороженого"></td>
-                            <td class="basket-table__product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                            <td class="basket-table__product-weight">1,5 кг <span class="basket-table__product-price">х 300 руб.</span></td>
-                            <td class="basket-table__product-cost">450  руб.</td>
-                          </tr>
-                      </table>
-                        <p class="basket-table__product-sum"><b>Итого: 750 руб.</b></p>
-                        <button class="basket-table-button button" type="submit" name="basket-table__order">Оформить заказ</button>
-                    </form>
-                </div>
-              </div> -->
             </div>
           </div>
       </nav>
@@ -131,7 +107,7 @@
               <img src="img/main_ice-cream__2.png" width="333" height="519" alt="Фото мороженки">
               <h2>Крем-брюле и пломбир <br>
               с малиновым джемом</h2>
-              <a class="button" class="full-basket" href="">Давайте оба!</a>
+              <a class="full-basket button" href="">Давайте оба!</a>
             </div>
           </div>
           <div class="carusel__slider">
@@ -218,9 +194,7 @@
       <p class="benefits__text">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="benefits__list">
         <li class="benefits__list-item">
-          <div class="benefits__list-item-icon">
-            <i></i>
-          </div>
+            <i class="benefits__list-item-icon"></i>
           <span class="benefits__list-item-text">
           Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем
           технологий.</span>
@@ -261,7 +235,7 @@
         </p>
         <form class="subscribes__form">
           <label class="visually-hidden" for="subscribes-email">Введите электронную почту для подписки на рассылку</label>
-          <input type="email" placeholder="Электронная почта" name="subscribes-email" id="subscribes-email">
+          <input class="subscribes__input" type="email" placeholder="Электронная почта" name="subscribes-email" id="subscribes-email">
           <button class="subscribes__button button">Отправить</button>
         </form>
       </div>

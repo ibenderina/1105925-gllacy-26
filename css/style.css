@@ -31,10 +31,9 @@ input[type="radio"].visually-hidden {
 .button {
   box-shadow: 0px 1px 2px 0 #ac1000;
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 25px;
+  border-radius: 50px;
   border: 0;
   text-decoration: none;
-  padding: 15px 25px;
   text-align: center;
   color: #fefefe;
   font-weight: 700;
@@ -281,6 +280,10 @@ a.header__menu-inner-link--active {
   margin: 20px 15px;
 }
 
+.enter-field__button {
+  padding: 15px 25px;
+}
+
 .header__user-buttons-enter:hover .header__enter-field, .header__user-buttons-basket:hover .basket-table {
   display: inline-block;
 }
@@ -309,6 +312,7 @@ a.header__menu-inner-link--active {
 
 .basket-table-button {
   bottom: 20px;
+  padding: 13px 15px;
 }
 
 .basket-table__product-name, .basket-table__product-cost, .basket-table__product-weight {
@@ -530,6 +534,11 @@ a.header__menu-inner-link--active {
   background-color: #ffffff;
 }
 
+.full-basket {
+  padding: 17px 41px;
+  font-size: 32px;
+}
+
 /* Малинка/шоколадка даром */
 
 .gifts {
@@ -569,6 +578,7 @@ a.header__menu-inner-link--active {
   bottom: 23px;
   font-size: 18px;
   font-weight: 700;
+  padding: 14px 21px;
 }
 
 /* Выше блок с акционными товарами */
@@ -584,7 +594,6 @@ a.header__menu-inner-link--active {
   background-color: #9FB3A8;
   padding: 9px 20px;
   margin: 8px 0;
-  position: relative;
 }
 
 /* РАЗОБРАТЬСЯ ТУТ С РАДИО И ЧЕКБОКСАМИ!!! */
@@ -620,7 +629,7 @@ a.header__menu-inner-link--active {
   content: "";
   left: -42px;
   top: -1px;
-  width: 20px;
+  width: 24px;
   height: 20px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
@@ -696,6 +705,97 @@ a.header__menu-inner-link--active {
   margin-right: 10px;
 }
 
+
+/* Ниже стили для input[type="range"] на странице каталога */
+
+
+.form-group-style-range {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+
+.form-group-style-range:focus {
+  outline: none;
+}
+
+.form-group-style-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #f8f7f4;
+}
+
+.form-group-style-range::-webkit-slider-thumb {
+  background-image: url(../img/filter-button.svg);
+  height: 22px;
+  width: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+.form-group-style-range::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #f8f7f4;
+}
+
+.form-group-style-range::-moz-range-thumb {
+  background-image: url(../img/filter-button.svg);
+  height: 22px;
+  width: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+.form-group-style-range::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+.form-group-style-range::-ms-fill-lower {
+  background: red;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.form-group-style-range::-ms-fill-upper {
+  background: red;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.form-group-style-range::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.form-group-style-range:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+.form-group-style-range:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+
+/* Выше стили для input[type="range"] на странице каталога */
+
+
 .catalog-item:hover {
   background-color:rgba(248, 247, 244, .2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -705,6 +805,7 @@ a.header__menu-inner-link--active {
 
 .catalog-item__hover-button {
   display: none;
+  padding: 13px 17px;
 }
 
 .catalog-item:hover .catalog-item__hover-button {
@@ -823,10 +924,12 @@ a.header__menu-inner-link--active {
   width: 49px;
   height: 49px;
   display: inline-block;
+  float: left;
 }
 
 .benefits__list-item {
   vertical-align: middle;
+  margin-bottom: 28px;
 }
 
 .benefits__list-item-text {
@@ -847,6 +950,7 @@ a.header__menu-inner-link--active {
 
 .benefits__list {
   column-count: 2;
+  padding: 0;
 }
 
 .articles__stock {
@@ -923,17 +1027,12 @@ a.header__menu-inner-link--active {
   display: block;
 }
 
+.subscribes__input {
+  min-width: 300px;
+}
+
 .subscribes__button {
-  background-color: rgba (172, 16, 0, 0.64);
-  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-  background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 20px;
-  text-decoration: none;
-  padding: 10px 15px;
-  text-align: center;
-  color: #fefefe;
-  font-weight: 700;
-  font-size: 18px;
+  padding: 14px 19px;
 }
 
 /* Блок с контактами на карте ниже */
@@ -983,13 +1082,14 @@ a.header__menu-inner-link--active {
 }
 
 .address .address__button {
-  color: #FFFFFF;
-  font-size: 18px;
-  font-weight: 700;
   display: block;
-  text-align: center;
   margin-top: 10px;
-  text-decoration: none;
+  color: #fefefe;
+  padding: 13px 28px;
+}
+
+.address .address__button:hover {
+  color: #fefefe;
 }
 
 /* Блок с контактами на карте выше */
@@ -1119,8 +1219,4 @@ line-height: 1.38;
 
 .call-back--wrapper.active {
   display: block;
-}
-
-.call-back {
-
 }
