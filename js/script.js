@@ -1,8 +1,12 @@
-var call_back_wrapper = document.querySelector(".call-back--wrapper");
 
+var call_back_wrapper = document.querySelector(".call-back--wrapper");
 call_back_wrapper.addEventListener("click", function (evt) {
-  call_back_wrapper.classList.remove("active");
+var el = evt.target;
+if (!(el && evt.target.closest("form"))) {
+call_back_wrapper.classList.remove("active");
+}
 });
+
 
 var address__button = document.querySelector(".address__button");
 

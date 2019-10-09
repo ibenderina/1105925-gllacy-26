@@ -538,7 +538,7 @@ a.header__menu-inner-link--active {
   margin-top: 50px;
   text-align: center;
   transition: background-image 1s;
-  background-image: url(../img/carousel/12.png);
+  background-image: url(../img/carousel__1.png);
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -605,13 +605,13 @@ a.header__menu-inner-link--active {
 }
 
 .product-1:checked ~ .carousel__slide {
-  background-image: url(../img/carousel/12.png);
+  background-image: url(../img/carousel__1.png);
 }
 .product-2:checked ~ .carousel__slide {
-  background-image: url(../img/carousel/34.png);
+  background-image: url(../img/carousel__2.png);
 }
 .product-3:checked ~ .carousel__slide {
-  background-image: url(../img/carousel/56.png);
+  background-image: url(../img/carousel__3.png);
 }
 
 
