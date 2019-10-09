@@ -487,7 +487,7 @@ a.header__menu-inner-link--active {
   margin-top: -275px;
   background-repeat: no-repeat;
   background-image: radial-gradient(circle closest-side, rgba(255,255,255,.5), transparent);
-  }
+}
 
 .carusel__image h2 {
   font-weight: 700;
@@ -501,12 +501,42 @@ a.header__menu-inner-link--active {
   text-align: center;
 }
 
+.carusel__slider {
+  position: relative;
+}
+
+.carusel__slider-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+}
+
+.carusel__slider-buttons label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~  label[for="product-1"],
+#product-2:checked ~  label[for="product-2"],
+#product-3:checked ~  label[for="product-3"] {
+  background-color: #ffffff;
+}
+
 /* Малинка/шоколадка даром */
 
 .gifts {
   display: flex;
   margin-top: -7em;
   justify-content: space-between;
+  padding: 0;
 }
 
 .gifts-item {
@@ -561,13 +591,20 @@ a.header__menu-inner-link--active {
 
 .form-group__fat-radio + label::before {
   content: "";
-  position: absolute;
   left: -42px;
   top: -1px;
-  width: 16px;
-  height: 16px;
-  border: 2px solid red;
-  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(1);
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.form-group__fat-radio + label {
+  position: relative;
 }
 
 .form-group__fat-radio:disabled + label {
@@ -575,22 +612,47 @@ a.header__menu-inner-link--active {
   opacity: 0.5;
 }
 
-.form-group__fat-radio:checked + label::after {
+.form-group__fat-radio:checked + label::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+.form-group__filler-checkbox + label::before {
   content: "";
-  position: absolute;
-  top: 5px;
-  left: -36px;
-  width: 8px;
-  height: 8px;
-  background-color: red;
-  border-radius: 50%;
+  left: -42px;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(1);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.form-group__filler-checkbox + label {
+  position: relative;
+}
+
+.form-group__filler-checkbox:disabled + label {
+  color: #000000;
+  opacity: 0.5;
+}
+
+.form-group__filler-checkbox:checked + label::before {
+  background-image: url(../img/checkbox-on.svg);
+  width: 24px;
+  height: 20px;
 }
 
 .sort_type {
   color: white;
   background-color: transparent;
   border: 1px solid transparent;
-}
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  }
 
 .sort_type:hover {
   color: #323232;

@@ -125,11 +125,6 @@
     <main>
         <h1 class="visually-hidden">Интернет-магазин мороженого</h1>
         <div class="carusel">
-          <div class="carusel__slider">
-            <div class="carusel__slider-item"><label class="visually-hidden">Первый слайд</label></div>
-            <div class="carusel__slider-item"><label class="visually-hidden">Второй слайд</label></div>
-            <div class="carusel__slider-item"><label class="visually-hidden">Третий слайд</label></div>
-          </div>
           <div class="carusel__image">
             <div class="carusel__image-item">
               <img src="img/main_ice-cream__1.png" width="372" height="584" alt="Фото мороженки">
@@ -138,6 +133,16 @@
               с малиновым джемом</h2>
               <a class="button" class="full-basket" href="">Давайте оба!</a>
             </div>
+          </div>
+          <div class="carusel__slider">
+              <div class="carusel__slider-buttons">
+                  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+                  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+                  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+                  <label for="product-1">Первый слайд</label>
+                  <label for="product-2">Второй слайд</label>
+                  <label for="product-3">Третий слайд</label>
+                </div>
           </div>
         </div>
         <ul class="gifts">
