@@ -30,15 +30,15 @@
             <div class="header__user-buttons-find">
               <a class="header__find-link" href="">
                 <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
-                </a>
-                <div class="header__user-buttons--style">
-                  <div class="header__find-field">
-                    <form>
-                      <label class="visually-hidden" for="find-field">Окно поиска</label>
-                      <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
-                    </form>
-                  </div>
+              </a>
+              <div class="header__user-buttons--style">
+                <div class="header__find-field">
+                  <form>
+                    <label class="visually-hidden" for="find-field">Окно поиска</label>
+                    <input type="text" name="find-field" id="find-field" placeholder="Что ищем?">
+                  </form>
                 </div>
+              </div>
             </div>
             <div class="header__user-buttons-enter">
               <a class="header__enter-link" href="">
@@ -48,9 +48,9 @@
                 <div class="header__enter-field">
                     <form>
                         <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                        <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
-                        <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
-                        <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
+                        <input type="email" name="user-email" id="user-email" placeholder="Электронная почта" required>
+                        <label class="visually-hidden" for="user-password">Пароль для авторизации</label>
+                        <input type="password" name="user-password" id="user-password" placeholder="Пароль" required>
                         <div class="enter-field__submit">
                             <button class="enter-field__button button" type="submit">Войти</button>
                             <div class="enter-field__forgot-password">
@@ -76,7 +76,6 @@
     </header>
 
 
-
     <!--  СВЕРХУ ШАПКА -->
 
 
@@ -85,45 +84,42 @@
           <form>
             <p class="call-back__text">Мы обязательно вам ответим!</p>
             <label class="visually-hidden" for="username">Введите имя</label>
-            <input type="text" name="username" id="username" placeholder="Как вас зовут?">
+            <input class="call-back__input" type="text" name="username" id="username" placeholder="Как вас зовут?">
             <label class="visually-hidden" for="usermail">Введите электронную почту</label>
-            <input type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
-            <textarea rows="7" placeholder="Напишите что-нибудь..."></textarea>
-            <button class="button" type="submit">Отправить</button>
+            <input class="call-back__input" type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
+            <textarea class="call-back__textarea" rows="7" placeholder="Напишите что-нибудь..."></textarea>
+            <button class="call-back__button button" type="submit">Отправить</button>
           </form>
         </div>
       </div>
 
-
     <!--  Выше форма обратной связи, реагирует на кнопку "class="address__button"" на главной странице -->
-
 
     <main>
         <h1 class="visually-hidden">Интернет-магазин мороженого</h1>
-        <div class="carusel">
-          <div class="carusel__image">
-            <div class="carusel__image-item">
-              <img src="img/main_ice-cream__1.png" width="372" height="584" alt="Фото мороженки">
-              <img src="img/main_ice-cream__2.png" width="333" height="519" alt="Фото мороженки">
-              <h2>Крем-брюле и пломбир <br>
-              с малиновым джемом</h2>
-              <a class="full-basket button" href="">Давайте оба!</a>
-            </div>
+        <div class="carousel">
+          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+
+          <div class="carousel__bg-helper"></div>
+
+          <div class="carousel__slide carousel__slide--active">
+            <img src="img/carousel/12.png" height="584" alt="Фото мороженки" style="visibility: hidden">
+            <h2>Крем-брюле и пломбир <br>с малиновым джемом</h2>
+            <a class="full-basket button" href="">Давайте оба!</a>
           </div>
-          <div class="carusel__slider">
-              <div class="carusel__slider-buttons">
-                  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-                  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-                  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-                  <label for="product-1">Первый слайд</label>
-                  <label for="product-2">Второй слайд</label>
-                  <label for="product-3">Третий слайд</label>
-                </div>
+          <div class="carousel__slider">
+            <div class="carousel__slider-buttons">
+              <label for="product-1">Первый слайд</label>
+              <label for="product-2">Второй слайд</label>
+              <label for="product-3">Третий слайд</label>
+            </div>
           </div>
         </div>
         <ul class="gifts">
           <li class="gifts-item gifts__item">
-            <img src="img/gifts-item__background--berry.jpeg" width="570" height="300" alt="Фон с малинкой">
+            <img src="img/gifts-item__background--berry.jpeg" width="560" height="229" alt="Фон с малинкой">
             <div class="gifts-item__content">
               <h2 class="gifts-item__title">Малинка даром!</h2>
               <p class="gifts-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно. </p>
@@ -131,7 +127,7 @@
             <a class="gifts-item__link button" href="">Хочу варенье!</a>
             </li>
           <li class="gifts-item gifts__item">
-            <img src="img/gifts-item__background--choco.jpeg" width="570" height="300" alt="Фон с шоколадкой">
+            <img src="img/gifts-item__background--choco.jpeg" width="560" height="229" alt="Фон с шоколадкой">
             <div class="gifts-item__content">
               <h2 class="gifts-item__title">Шоколадки даром!</h2>
               <p class="gifts-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.   </p>
@@ -140,75 +136,89 @@
             </li>
         </ul>
         <ul class="catalog">
-            <li class="catalog__item catalog-item">
-              <div>
-                <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
-                <div class="catalog-item-cost">
-                  <span class="catalog-item__price">310</span>
-                  <span class="catalog-item__ruble">₽</span>
-                  <span class="catalog-item__weight">/кг</span>
-                </div>
+          <li class="catalog__item catalog-item">
+            <div>
+              <img src="img/ice-cream__1.jpg" width="267" height="267" alt="Фото мороженого">
+              <div class="catalog-item-cost">
+                <span class="catalog-item__price">310</span>
+                <span class="catalog-item__ruble">₽</span>
+                <span class="catalog-item__weight">/кг</span>
               </div>
-              <h3 class="catalog-item__title"><a class="catalog-item__title-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
-            </li>
-            <li class="catalog__item catalog-item">
-              <div>
-                <img src="img/ice-cream__2.jpg" width="267" height="267" alt="Фото мороженого">
-                <div class="catalog-item-cost">
-                  <span class="catalog-item__price">380</span>
-                  <span class="catalog-item__ruble">₽</span>
-                  <span class="catalog-item__weight">/кг</span>
-                </div>
+            </div>
+            <h3 class="catalog-item__title">
+              <a class="catalog-item__title-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </h3>
+            <button class="catalog-item__hover-button button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog__item catalog-item">
+            <div>
+              <img src="img/ice-cream__2.jpg" width="267" height="267" alt="Фото мороженого">
+              <div class="catalog-item-cost">
+                <span class="catalog-item__price">380</span>
+                <span class="catalog-item__ruble">₽</span>
+                <span class="catalog-item__weight">/кг</span>
               </div>
-              <h3 class="catalog-item__title"><a class="catalog-item__title-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
-              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
-            </li>
-            <li class="catalog__item catalog-item">
-              <div>
-                <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
-                <div class="catalog-item-cost">
-                  <span class="catalog-item__price">355</span>
-                  <span class="catalog-item__ruble">₽</span>
-                  <span class="catalog-item__weight">/кг</span>
-                </div>
+            </div>
+            <h3 class="catalog-item__title">
+              <a class="catalog-item__title-link" href="">Сливочно-кофейное с кусочками шоколада</a>
+            </h3>
+            <button class="catalog-item__hover-button button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog__item catalog-item">
+            <div>
+              <img src="img/ice-cream__3.jpg" width="267" height="267" alt="Фото мороженого">
+              <div class="catalog-item-cost">
+                <span class="catalog-item__price">355</span>
+                <span class="catalog-item__ruble">₽</span>
+                <span class="catalog-item__weight">/кг</span>
               </div>
-              <h3 class="catalog-item__title"><a class="catalog-item__title-link" href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
-            </li>
-            <li class="catalog__item catalog-item">
-              <div>
-                <img src="img/ice-cream__4.jpg" width="267" height="267" alt="Фото мороженого">
-                <div class="catalog-item-cost">
-                  <span class="catalog-item__price">415</span>
-                  <span class="catalog-item__ruble">₽</span>
-                  <span class="catalog-item__weight">/кг</span>
-                </div>
+            </div>
+            <h3 class="catalog-item__title">
+              <a class="catalog-item__title-link" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </h3>
+            <button class="catalog-item__hover-button button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog__item catalog-item">
+            <div>
+              <img src="img/ice-cream__4.jpg" width="267" height="267" alt="Фото мороженого">
+              <div class="catalog-item-cost">
+                <span class="catalog-item__price">415</span>
+                <span class="catalog-item__ruble">₽</span>
+                <span class="catalog-item__weight">/кг</span>
               </div>
-              <h3 class="catalog-item__title"><a class="catalog-item__title-link" href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
-              <button class="catalog-item__hover-button button">Быстрый просмотр</button>
-            </li>
-            </ul>
+            </div>
+            <h3 class="catalog-item__title">
+              <a class="catalog-item__title-link" href="">Сливочное крем-брюле с карамельной подливкой</a>
+            </h3>
+            <button class="catalog-item__hover-button button">Быстрый просмотр</button>
+          </li>
+        </ul>
     </main>
     <section class="benefits">
-      <p class="benefits__text">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+      <p class="benefits__header">
+        Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
+      </p>
       <ul class="benefits__list">
         <li class="benefits__list-item">
-            <i class="benefits__list-item-icon"></i>
+          <i class="benefits__list-item-icon"></i>
           <span class="benefits__list-item-text">
-          Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем
-          технологий.</span>
+            Все наше мороженое изготавливается на собственном производстве, с использованием современного
+            оборудования и проверенных временем технологий.
+          </span>
         </li>
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
-        <span class="benefits__list-item-text">
-        Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки
-        произведены из натурального, экологически чистого сырья.</span>
+          <span class="benefits__list-item-text">
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+            Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+          </span>
       </li>
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
-          <span class="benefits__list-item-text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное
-            сотрудничество.</span>
+          <span class="benefits__list-item-text">
+            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное
+            сотрудничество.
+          </span>
         </li>
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
