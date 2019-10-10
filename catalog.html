@@ -52,7 +52,7 @@
                   <form>
                       <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
                       <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
-                      <label class="visually-hidden" for="user-password ">Пароль для авторизации</label>
+                      <label class="visually-hidden" for="user-password">Пароль для авторизации</label>
                       <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
                       <div class="enter-field__submit">
                           <button class="enter-field__button button" type="submit">Войти</button>
@@ -126,7 +126,7 @@
           <div class="form-group">
               <label for="cost">Цена: 100 руб. – 500 руб.</label>
               <div class="form-group-style">
-                <input class="form-group-style-range" type="range" name="cost" min="100" max="500">
+                <input class="form-group-style-range" type="range" name="cost" id="cost" min="100" max="500">
               </div>
           </div>
           <div class="form-group">
@@ -153,6 +153,7 @@
           <button class="form-group-button">Применить</button>
         </div>
       </form>
+      <h2 class="visually-hidden">Каталог мороженого</h2>
       <ul class="catalog">
           <li class="catalog__item catalog-item">
               <div class="">
@@ -308,6 +309,7 @@
       </ul>
     </main>
     <footer class="footer">
+        <h5 class="visually-hidden">Наши аккаунты в соцсетях</h5>
         <ul class="social-links">
           <li class="social-links__item">
             <a class="social-links__link" href="">
@@ -323,6 +325,7 @@
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
         </ul>
         <div>
+          <h5 class="visually-hidden">О нас</h5>
           <ul class="footer__about">
             <li class="footer__about-item">
               <i class="footer__about-item--icon"></i>
@@ -336,6 +339,7 @@
             <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
           </ul>
         </div>
+        <h6 class="visually-hidden">Разработчики нашего сайта</h6>
         <div>
           <a class="footer__developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип разработчика">

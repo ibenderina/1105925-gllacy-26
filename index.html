@@ -84,9 +84,9 @@
           <form>
             <p class="call-back__text">Мы обязательно вам ответим!</p>
             <label class="visually-hidden" for="username">Введите имя</label>
-            <input class="call-back__input" type="text" name="username" id="username" placeholder="Как вас зовут?">
+            <input class="call-back__input" type="text" name="username" id="username" placeholder="Как вас зовут?" required>
             <label class="visually-hidden" for="usermail">Введите электронную почту</label>
-            <input class="call-back__input" type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?">
+            <input class="call-back__input" type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?"  required>
             <textarea class="call-back__textarea" rows="7" placeholder="Напишите что-нибудь..."></textarea>
             <button class="call-back__button button" type="submit">Отправить</button>
           </form>
@@ -117,6 +117,7 @@
             </div>
           </div>
         </div>
+        <h3 class="visually-hidden">Акции на мороженое</h3>
         <ul class="gifts">
           <li class="gifts-item gifts__item">
             <img src="img/gifts-item__background--berry.jpeg" width="560" height="229" alt="Фон с малинкой">
@@ -135,6 +136,7 @@
             <a class="gifts-item__link button" href="">Хочу шоколадки!</a>
             </li>
         </ul>
+        <h2 class="visually-hidden">Каталог мороженого</h2>
         <ul class="catalog">
           <li class="catalog__item catalog-item">
             <div>
@@ -194,10 +196,12 @@
           </li>
         </ul>
     </main>
+    <h4 class="visually-hidden">Преимущества нашего интернет-магазина</h4>
     <section class="benefits">
       <p class="benefits__header">
         Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
       </p>
+      <h5 class="visually-hidden">Список преимуществ</h5>
       <ul class="benefits__list">
         <li class="benefits__list-item">
           <i class="benefits__list-item-icon"></i>
@@ -227,6 +231,7 @@
         </li>
       </ul>
     </section>
+    <h4 class="visually-hidden">Статьи на сайте</h4>
     <section class="articles__stock">
       <div class="article">
         <div class="article__content">
@@ -240,6 +245,7 @@
             </a>
         </div>
       </div>
+      <h4 class="visually-hidden">Форма подписки</h4>
       <div class="subscribes">
         <p class="subscribes__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
         </p>
@@ -251,7 +257,8 @@
       </div>
     </section>
     <section class="map">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AXWUbK2nw6gR2-xpv16dDyL_sRWGopB5q&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+      <h4 class="visually-hidden">Как к нам доехать</h4>
+      <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AXWUbK2nw6gR2-xpv16dDyL_sRWGopB5q&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
       <div class="address">
         <p class="address__text">Адрес главного офиса<br>  и офлайн-магазина: </p>
         <p class="address__text address__text--bold address__text--br">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
@@ -263,6 +270,7 @@
       </div>
     </section>
     <footer class="footer">
+        <h5 class="visually-hidden">Наши аккаунты в соцсетях</h5>
         <ul class="social-links">
           <li class="social-links__item">
             <a class="social-links__link" href="">
@@ -277,6 +285,7 @@
             <a class="social-links__link" href="">
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
         </ul>
+        <h5 class="visually-hidden">О нас</h5>
         <div>
           <ul class="footer__about">
             <li class="footer__about-item">
@@ -291,6 +300,7 @@
             <li class="footer__about-item"><a class="footer__about-link" href="">Экологические стандарты</a></li>
           </ul>
         </div>
+        <h6 class="visually-hidden">Разработчики нашего сайта</h6>
         <div>
           <a class="footer__developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип разработчика">
