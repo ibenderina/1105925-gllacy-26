@@ -799,7 +799,7 @@ a.header__menu-inner-link--active {
   }
 
 .sort_type:hover {
-  color: #323232;
+  filter: invert(1);
 }
 
 /* Скрывает стрелку в IE 10 и 11 */
@@ -950,6 +950,16 @@ sort_type::-ms-expand {
 .catalog-item img {
   border-radius: 50%;
 }
+
+.catalog__item-popular {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+
+  background-image: url(../img/catalog__item-popular.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 
 .catalog__item {
   display: inline-block;
@@ -1392,6 +1402,25 @@ input[type="email"].subscribes__input {
   display: block;
 }
 
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.call-back--wrapper.active .call-back {
+  animation: slide-down 0.5s;
+  opacity: 1;
+  visibility: visible;
+}
+
 .call-back {
   position: absolute;
   left: 30%;
@@ -1402,6 +1431,31 @@ input[type="email"].subscribes__input {
 
   background-color: #f8f7f4;
   border-radius: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes shudder {
+  from {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-1deg);
+  }
+  50% {
+    transform: rotateZ(1deg);
+  }
+  75% {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+.call-back--error {
+  animation: shudder 0.4s;
 }
 
 .call-back__text {
