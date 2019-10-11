@@ -1,3 +1,29 @@
+(function() {
+
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.matchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector;
+  }
+
+})();
+
+(function() {
+  if (!Element.prototype.closest) {
+    Element.prototype.closest = function(css) {
+      var node = this;
+      while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+      }
+      return null;
+    };
+  }
+})();
+
+// Выше реализация методов для IE, без нее глючит форма обратной связи, взяла с сайта learn JavaScript
+
 var call_back_wrapper = document.querySelector(".call-back--wrapper");
 call_back_wrapper.addEventListener("click", function (evt) {
   var el = evt.target;
