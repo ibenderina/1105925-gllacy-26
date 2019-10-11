@@ -446,6 +446,7 @@ a.header__menu-inner-link--active {
 .header__enter-field button,
 .enter-field__forgot-password {
   display: inline-block;
+
   text-decoration: underline;
   color: #323232;
 }
@@ -465,6 +466,7 @@ a.header__menu-inner-link--active {
 
 .enter-field__new-user {
   flex-grow: 1;
+
   font-size: 13px;
   font-weight: 400;
   line-height: 1.85;
@@ -515,14 +517,15 @@ a.header__menu-inner-link--active {
 
 .header__user-buttons-basket {
   position: relative;
+
   margin-right: -9px;
 }
 
 .header__user-buttons-basket img,
 .header__enter-link img {
   display: inline;
-  padding: 8px 3px;
 
+  padding: 8px 3px;
   vertical-align: middle;
 }
 
@@ -558,16 +561,20 @@ a.header__menu-inner-link--active {
 .carousel {
   padding: 85px 0;
   margin-top: -183px;
+
   text-align: center;
+
   background-repeat: no-repeat;
   background-image: radial-gradient(circle closest-side, rgba(255,255,255,.5), transparent);
 }
 
 .carousel__slide {
   display: none;
+
   height: 584px;
   margin-top: 50px;
   text-align: center;
+
   transition: background-image 1s;
   background-image: url(../img/carousel__1.png);
   background-repeat: no-repeat;
@@ -577,6 +584,7 @@ a.header__menu-inner-link--active {
 .carousel__slide h2 {
   margin-top: -281px;
   margin-bottom: 34px;
+
   font-weight: 700;
   font-size: 60px;
   color: #FFFFFF;
@@ -588,6 +596,7 @@ a.header__menu-inner-link--active {
 
 .full-basket {
   padding: 17px 41px;
+
   font-size: 32px;
 }
 
@@ -598,17 +607,21 @@ a.header__menu-inner-link--active {
 
 .carousel__slider-buttons {
   position: absolute;
+
   bottom: 75px;
   left: 0;
+
   font-size: 0;
 }
 
 .carousel__slider-buttons label {
   display: inline-block;
+
   width: 17px;
   height: 17px;
   margin-right: 8px;
   vertical-align: top;
+
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -622,12 +635,14 @@ a.header__menu-inner-link--active {
 }
 
 .carousel__bg-helper {
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: -1;
-  position: fixed;
-  width: 100%;
-  height: 100%;
+
   transition: background-color 1s;
 }
 
@@ -680,6 +695,7 @@ a.header__menu-inner-link--active {
 
 .gifts {
   display: flex;
+
   justify-content: space-between;
   margin-top: -100px;
   margin-bottom: 40px;
@@ -710,10 +726,12 @@ a.header__menu-inner-link--active {
 
 .gifts-item__link {
   position: absolute;
+  display: flex;
+
   right: 21px;
   bottom: 25px;
-  display: flex;
   padding: 14px 21px;
+
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -723,17 +741,21 @@ a.header__menu-inner-link--active {
 /* Выше блок с акционными товарами */
 
 .catalog-form {
-  margin: 20px 0px;
+  margin: 25px 0px;
 
   color: white;
 }
 
 .form-row {
+  display: flex;
+
+  align-items: center;
   padding-bottom: 5px;
 }
 
 .form-group-style {
   display: flex;
+
   justify-content: space-between;
   padding: 9px 18px;
   margin: 8px 0;
@@ -754,6 +776,7 @@ a.header__menu-inner-link--active {
   content: "";
 
   display: inline-block;
+
   width: 22px;
   height: 22px;
   margin-right: 5px;
@@ -815,7 +838,7 @@ a.header__menu-inner-link--active {
 
   background-color: transparent;
   border: 1px solid transparent;
-  background-image: url(../img/select-arrow.svg);
+  background-image: url(../img/icon-down-dir.svg);
   background-repeat: no-repeat;
   background-position: right center;
   -moz-appearance: none;
@@ -832,14 +855,14 @@ sort_type::-ms-expand {
     display: none;
 }
 
-
 .form-group input:hover {
   border: 0;
 }
 
 .form-group-button {
-  padding: 9px 20px;
-  margin: 10px;
+  padding: 7px 27px;
+  margin-top: 11px;
+  margin-left: 2px;
 
   color: white;
 
@@ -855,6 +878,7 @@ sort_type::-ms-expand {
 
 .form-group-button:active {
   padding: 11px 22px;
+
   color: #323232;
   box-shadow: inset 0 2px 1px 0 #696969;
   background-color: #ededed;
@@ -863,112 +887,67 @@ sort_type::-ms-expand {
 
 .form-group > label {
   display: block;
+
   padding-left: 15px;
+
   font-size: 14px;
   font-weight: 500;
 }
 
 .form-group {
   display: inline-block;
-  margin-right: 10px;
-}
 
+  margin-right: 16px;
+}
 
 /* Ниже стили для input[type="range"] на странице каталога */
 
-
-.form-group-style-range {
-  -webkit-appearance: none;
-  width: 180px;
+.form-group__range-filter {
+  width: 176px;
+  margin: 7px;
 }
 
-.form-group-style-range:focus {
-  cursor: pointer;
-  background: #f8f7f4;
+.form-group__range-controls {
+  position: relative;
+
+  background-color: #f1f1f1;
 }
 
-.form-group-style-range:focus {
-  outline: none;
-}
-
-.form-group-style-range::-webkit-slider-runnable-track {
-  vertical-align: middle;
-
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  background: red;
-  opacity: 0.5;
-}
-
-.form-group-style-range::-webkit-slider-thumb {
-  height: 22px;
-  width: 20px;
-  margin-top: -8px;
-
-  background-image: url(../img/filter-button.svg);
-  opacity: 1;
-  cursor: pointer;
-
-  -webkit-appearance: none;
-}
-
-.form-group-style-range::-moz-range-track {
-  width: 100%;
+.form-group__range-controls .form-group__range-scale {
   height: 4px;
 
-  background: #f8f7f4;
-  cursor: pointer;
+  background: #d7dcde;
 }
 
-.form-group-style-range::-moz-range-thumb {
-  height: 22px;
-  width: 20px;
-  margin-top: -10px;
-
-  background-image: url(../img/filter-button.svg);
-  opacity: 1;
-  cursor: pointer;
-
-  -webkit-appearance: none;
-}
-
-.form-group-style-range::-ms-track {
-  width: 100%;
+.form-group__range-controls .form-group__range-bar {
+  width: 50%;
   height: 4px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
+  margin-left: 20%;
+
+  background: #ffffff;
 }
 
-.form-group-style-range::-ms-fill-lower {
-  background: #f8f7f4;
-}
-
-.form-group-style-range::-ms-fill-upper {
-  background: #f8f7f4;
-}
-
-.form-group-style-range::-ms-thumb {
-  background-image: url(../img/filter-button.svg);
-  height: 22px;
-  width: 20px;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.form-group-style-range:focus::-ms-fill-lower {
-  background: #f8f7f4;
-}
-
-.form-group-style-range:focus::-ms-fill-upper {
-  background: #f8f7f4;
-}
-
-.range__min-price {
+.form-group__range-controls .range__toggle {
   position: absolute;
+  top: -8px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-group__range-controls .range__toggle-min {
+  left: 12px;
+}
+
+.form-group__range-controls .range__toggle-max {
+  left: 110px;
 }
 
 /* Выше стили для input[type="range"] на странице каталога */
@@ -1012,16 +991,18 @@ sort_type::-ms-expand {
 
 .catalog__item-popular {
   position: absolute;
+
   width: 61px;
   height: 61px;
 
   background-image: url(../img/catalog__item-popular.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  }
+}
 
 .catalog__item {
   display: inline-block;
+
   margin-top: -43px;
   width: 272px;
   height: 405px;
@@ -1053,7 +1034,7 @@ sort_type::-ms-expand {
 
 .catalog-item__title {
   margin-top: 28px;
-  padding: 0 10px;
+  padding: 3px 8px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1062,6 +1043,7 @@ sort_type::-ms-expand {
 
 .catalog {
   display: flex;
+
   flex-wrap: wrap;
   padding: 40px 0 0 0;
   justify-content: space-between;
@@ -1079,6 +1061,7 @@ sort_type::-ms-expand {
 
 .breadcrumbs {
   display: block;
+
   padding: 0;
   margin: 13px 0 0 0;
 
@@ -1109,9 +1092,10 @@ sort_type::-ms-expand {
 
 .benefits {
   display: block;
+
   padding: 4px 20px;
   margin: 0;
-  margin-top: -68px;
+  margin-top: -60px;
 
   color: #323232;
 
@@ -1156,6 +1140,7 @@ sort_type::-ms-expand {
 
 .benefits__list-item-icon {
   display: table-cell;
+
   width: 49px;
   height: 49px;
 
@@ -1165,6 +1150,7 @@ sort_type::-ms-expand {
 
 .benefits__list-item-text {
   display: table-cell;
+
   padding: 7px 4px 0 9px;
 
   font-size: 16px;
@@ -1213,6 +1199,7 @@ sort_type::-ms-expand {
 
 .article__title {
   display: block;
+
   width: 309px;
 
   font-size: 24px;
@@ -1250,6 +1237,7 @@ sort_type::-ms-expand {
 
 .subscribes__form {
   display: block;
+
   margin: 18px;
 }
 
@@ -1268,7 +1256,7 @@ input[type="email"].subscribes__input {
   position: relative;
 
   height: 430px;
-  margin: 47px -28px 0 -28px;
+  margin: 40px -28px 0 -28px;
 
   background-image: url("../img/map.jpeg");
   background-size: cover;
@@ -1276,6 +1264,7 @@ input[type="email"].subscribes__input {
 
 .address {
   position: absolute;
+
   top: 62px;
   right: 28px;
   padding: 28px 25px;
@@ -1291,6 +1280,7 @@ input[type="email"].subscribes__input {
 
 .address__text {
   display: inline-block;
+
   margin: 0;
 
   font-size: 14px;
@@ -1319,6 +1309,7 @@ input[type="email"].subscribes__input {
 
 .address .address__button {
   display: block;
+
   margin-top: 23px;
   padding: 14px 25px;
 
@@ -1367,6 +1358,7 @@ input[type="email"].subscribes__input {
 
 .footer__about {
   display: inline-block;
+
   padding-left: 0;
   margin: 20px 17px;
 
@@ -1391,12 +1383,12 @@ input[type="email"].subscribes__input {
 }
 
 .footer__about-item--icon {
+  display: inline-block;
+  position: absolute;
   left: -22px;
 
-  display: inline-block;
   width: 15px;
   height: 13px;
-  position: absolute;
 
   background-image: url(../img/heart.svg);
   background-repeat: no-repeat;
@@ -1420,6 +1412,7 @@ input[type="email"].subscribes__input {
 .pagination__link--active,
 .pagination__item:active .pagination__link {
   display: inline-block;
+
   width: 29px;
   height: 28px;
 
@@ -1447,6 +1440,7 @@ input[type="email"].subscribes__input {
 
 .pagination__link {
   display: inline-block;
+
   width: 25px;
   height: 25px;
 
@@ -1461,6 +1455,7 @@ input[type="email"].subscribes__input {
 
 .call-back--wrapper {
   display: none;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -1496,6 +1491,7 @@ input[type="email"].subscribes__input {
 
 .call-back {
   position: absolute;
+
   left: 30%;
   top: 10%;
   min-width: 478px;
@@ -1562,12 +1558,14 @@ input[type="email"].subscribes__input {
 
 .call-back__input {
   display: block;
+
   min-width: 60%;
   margin-bottom: 20px;
 }
 
 .call-back__textarea {
   display: block;
+
   min-width: 90%;
   margin-bottom: 25px;
   padding: 15px;

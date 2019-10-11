@@ -126,12 +126,15 @@
           <div class="form-group catalog-cost-range">
               <label for="cost">Цена: 100 руб. – 500 руб.</label>
               <div class="form-group-style">
-                <div class="range__min-price">
-                  <input class="form-group-style-range toggle1" type="range" name="cost" id="cost" min="100" max="500">
-                </div>
-                <div class="range__max-price">
-                  <input class="form-group-style-range toggle2" type="range" name="cost" id="cost" min="100" max="500">
-                </div>
+                  <div class="form-group__range-filter">
+                      <div class="form-group__range-controls">
+                        <div class="form-group__range-scale">
+                          <div class="form-group__range-bar"></div>
+                        </div>
+                        <div class="range__toggle range__toggle-min"></div>
+                        <div class="range__toggle range__toggle-max"></div>
+                      </div>
+                    </div>
               </div>
           </div>
           <div class="form-group catalog-fat">
@@ -148,8 +151,8 @@
           <div class="form-group catalog-filler">
               <label class="group-name">Наполнитель:</label>
               <div class="form-group-style">
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler1" id="filler1"><label for="filler1"> шоколадные</label>
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler2" id="filler2"><label for="filler2"> сахарные присыпки</label>
+                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler1" id="filler1" checked><label for="filler1"> шоколадные</label>
+                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler2" id="filler2" checked><label for="filler2"> сахарные присыпки</label>
                 <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler3" id="filler3"><label for="filler3"> фрукты</label>
                 <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler4" id="filler4"><label for="filler4"> сиропы</label>
                 <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler5" id="filler5"><label for="filler5"> джемы</label>
