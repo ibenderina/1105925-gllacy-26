@@ -808,7 +808,6 @@ a.header__menu-inner-link--active {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
-  filter: invert(1);
 }
 
 .form-group__fat-radio:checked + label::before {
@@ -839,7 +838,6 @@ a.header__menu-inner-link--active {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
-  filter: invert(1);
 }
 
 .form-group__filler-checkbox:disabled + label::before {
@@ -946,7 +944,7 @@ sort_type::-ms-expand {
 .form-group__range-controls .form-group__range-bar {
   width: 50%;
   height: 4px;
-  margin-left: 20%;
+  margin-left: 15%;
 
   background: #ffffff;
 }
