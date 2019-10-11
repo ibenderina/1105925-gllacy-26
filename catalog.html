@@ -110,9 +110,9 @@
         <li class="breadcrumbs__item">Сливочное</li>
       </ul>
       <h1 class="main__title">Сливочное мороженое</h1>
-      <form class="form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="catalog-form" action="https://echo.htmlacademy.ru" method="get">
         <div class="form-row">
-          <div class="form-group">
+          <div class="form-group catalog-sort">
             <label for="sort_type">Сортировка:</label>
             <div class="form-group-style">
               <select class="sort_type" name="sort_type" id="sort_type">
@@ -123,7 +123,7 @@
               </select>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group catalog-cost-range">
               <label for="cost">Цена: 100 руб. – 500 руб.</label>
               <div class="form-group-style">
                 <div class="range__min-price">
@@ -134,18 +134,18 @@
                 </div>
               </div>
           </div>
-          <div class="form-group">
+          <div class="form-group catalog-fat">
               <label>Жирность:</label>
               <div class="form-group-style">
                 <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat1"><label for="fat1"> 0%</label>
-                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat2"><label for="fat2"> до 10%</label>
+                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat2" checked><label for="fat2"> до 10%</label>
                 <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat3"><label for="fat3"> до 30%</label>
                 <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat4"><label for="fat4"> выше 30%</label>
               </div>
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group">
+          <div class="form-group catalog-filler">
               <label class="group-name">Наполнитель:</label>
               <div class="form-group-style">
                 <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler1" id="filler1"><label for="filler1"> шоколадные</label>

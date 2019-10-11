@@ -12,6 +12,10 @@ body {
   background-color: #849D8F;
 }
 
+iframe {
+  border: 0;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -153,6 +157,8 @@ a:hover {
 }
 
 .header__menu-inner--style {
+  z-index: 99;
+
   position: absolute;
   left: -15px;
   top: 15px;
@@ -482,6 +488,8 @@ a.header__menu-inner-link--active {
 }
 
 .header__user-buttons--style {
+  z-index: 99;
+
   position: absolute;
   right: 0;
   top: 30px;
@@ -674,6 +682,7 @@ a.header__menu-inner-link--active {
   display: flex;
   justify-content: space-between;
   margin-top: -100px;
+  margin-bottom: 40px;
   padding: 0;
 }
 
@@ -713,13 +722,20 @@ a.header__menu-inner-link--active {
 
 /* Выше блок с акционными товарами */
 
-.form {
+.catalog-form {
+  margin: 20px 0px;
+
   color: white;
 }
 
+.form-row {
+  padding-bottom: 5px;
+}
+
 .form-group-style {
-  display: inline-block;
-  padding: 9px 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 18px;
   margin: 8px 0;
 
   color: white;
@@ -728,20 +744,27 @@ a.header__menu-inner-link--active {
   background-color: #9FB3A8;
 }
 
+.form-group-style label {
+  padding-right: 10px;
+}
+
 /* РАЗОБРАТЬСЯ ТУТ С РАДИО И ЧЕКБОКСАМИ!!! */
 
 .form-group__fat-radio + label::before {
   content: "";
-  opacity: 0.8;
-  left: -42px;
-  top: -1px;
+
   display: inline-block;
   width: 22px;
   height: 22px;
+  margin-right: 5px;
+  margin-left: 4px;
+
   vertical-align: bottom;
+
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
   filter: invert(1);
 }
 
@@ -761,21 +784,19 @@ a.header__menu-inner-link--active {
 
 .form-group__filler-checkbox + label::before {
   content: "";
-  opacity: 0.8;
-  left: -42px;
-  top: -1px;
+
   display: inline-block;
   width: 24px;
   height: 20px;
+  margin: 0;
+
   vertical-align: top;
+
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
   filter: invert(1);
-}
-
-.form-group__filler-checkbox + label {
-  position: relative;
 }
 
 .form-group__filler-checkbox:disabled + label::before {
@@ -858,7 +879,7 @@ sort_type::-ms-expand {
 
 .form-group-style-range {
   -webkit-appearance: none;
-  width: 100%;
+  width: 180px;
 }
 
 .form-group-style-range:focus {
@@ -952,6 +973,21 @@ sort_type::-ms-expand {
 
 /* Выше стили для input[type="range"] на странице каталога */
 
+.catalog-sort {
+  width: 190px;
+}
+
+.catalog-cost-range {
+  width: 220px;
+}
+
+.catalog-fat {
+  width: 420px;
+}
+
+.catalog-filler {
+  width: 698px;
+}
 
 .catalog-item:hover {
   z-index: 2;
@@ -986,8 +1022,7 @@ sort_type::-ms-expand {
 
 .catalog__item {
   display: inline-block;
-  padding: 6px 0;
-  margin-top: -31px;
+  margin-top: -43px;
   width: 272px;
   height: 405px;
 
@@ -1028,7 +1063,7 @@ sort_type::-ms-expand {
 .catalog {
   display: flex;
   flex-wrap: wrap;
-  padding: 3em 0 0 0;
+  padding: 40px 0 0 0;
   justify-content: space-between;
 }
 
@@ -1045,6 +1080,7 @@ sort_type::-ms-expand {
 .breadcrumbs {
   display: block;
   padding: 0;
+  margin: 13px 0 0 0;
 
   font-size: 14px;
   font-weight: 400;
@@ -1059,7 +1095,13 @@ sort_type::-ms-expand {
  content: " » ";
 }
 
+.main {
+  margin-top: -42px;
+}
+
 .main__title {
+  margin: 7px 0;
+
   font-size: 35px;
   font-weight: 700;
   color: white;
@@ -1143,7 +1185,7 @@ sort_type::-ms-expand {
   height: 220px;
 
   background-image: url(../img/articles__background.jpeg);
-  background-position: left;
+  background-position: 18% 39%;
   background-origin: border-box;
   border-radius: 20px;
 }
@@ -1213,7 +1255,7 @@ sort_type::-ms-expand {
 
 input[type="email"].subscribes__input {
   min-width: 348px;
-  padding: 10px;
+  padding: 8px;
 }
 
 .subscribes__button {
@@ -1226,7 +1268,7 @@ input[type="email"].subscribes__input {
   position: relative;
 
   height: 430px;
-  margin: 29px -36px 0 -36px;
+  margin: 47px -28px 0 -28px;
 
   background-image: url("../img/map.jpeg");
   background-size: cover;
@@ -1234,8 +1276,8 @@ input[type="email"].subscribes__input {
 
 .address {
   position: absolute;
-  top: 74px;
-  right: 36px;
+  top: 62px;
+  right: 28px;
   padding: 28px 25px;
   width: 252px;
 
@@ -1259,7 +1301,7 @@ input[type="email"].subscribes__input {
 .address__text--bold {
   font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 26px;
 }
 
 .address__text--br {
@@ -1277,9 +1319,11 @@ input[type="email"].subscribes__input {
 
 .address .address__button {
   display: block;
-  margin-top: 10px;
+  margin-top: 23px;
+  padding: 14px 25px;
+
+  line-height: 18px;
   color: #fefefe;
-  padding: 13px 28px;
 }
 
 .address .address__button:hover {
@@ -1291,11 +1335,12 @@ input[type="email"].subscribes__input {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 17px 0;
 }
 
 .social-links {
   margin: 20px 0;
+  padding-left: 0;
 }
 
 .social-links__item img {
@@ -1322,8 +1367,8 @@ input[type="email"].subscribes__input {
 
 .footer__about {
   display: inline-block;
-  padding-left: 20px;
-  margin: 20px 0;
+  padding-left: 0;
+  margin: 20px 17px;
 
   font-size: 13px;
   font-weight: 400;
@@ -1346,7 +1391,7 @@ input[type="email"].subscribes__input {
 }
 
 .footer__about-item--icon {
-  left: -1.3em;
+  left: -22px;
 
   display: inline-block;
   width: 15px;
@@ -1367,6 +1412,11 @@ input[type="email"].subscribes__input {
 
 /* ВНИЗУ ПАГИНАЦИЯ  */
 
+.pagination {
+  text-align: right;
+  margin: -10px 0 30px 0;
+}
+
 .pagination__link--active,
 .pagination__item:active .pagination__link {
   display: inline-block;
@@ -1386,7 +1436,6 @@ input[type="email"].subscribes__input {
 
 .pagination__item {
   display: inline-block;
-  padding-right: 11px;
 }
 
 .pagination__link:hover {
@@ -1398,7 +1447,8 @@ input[type="email"].subscribes__input {
 
 .pagination__link {
   display: inline-block;
-  width: 29px;
+  width: 25px;
+  height: 25px;
 
   line-height: 28px;
   font-size: 16px;
@@ -1457,6 +1507,28 @@ input[type="email"].subscribes__input {
 
   background-color: #f8f7f4;
   border-radius: 10px;
+}
+
+@keyframes shudder {
+  from {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-1deg);
+  }
+  50% {
+    transform: rotateZ(1deg);
+  }
+  75% {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+.call-back__window.call-back--error {
+  animation: shudder 0.4s;
 }
 
 @keyframes shudder {

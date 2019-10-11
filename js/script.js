@@ -12,7 +12,7 @@ address_button.addEventListener("click", function (evt) {
   call_back_wrapper.classList.add("active");
 });
 
-var call_back_form = document.querySelector('.call-back form');
+var call_back_form = document.querySelector('.call-back__button');
 call_back_form.addEventListener('click', function (evt) {
   var form = evt.target.closest('form');
   if (!form.checkValidity()) {
