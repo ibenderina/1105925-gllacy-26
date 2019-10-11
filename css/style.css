@@ -526,6 +526,8 @@ a.header__menu-inner-link--active {
 }
 
 .header__user-buttons a {
+  white-space: nowrap;
+
   text-decoration: none;
 }
 
@@ -1137,15 +1139,19 @@ sort_type::-ms-expand {
 }
 
 .benefits__list {
-  column-count: 2;
+  display: flex;
+  flex-wrap: wrap;
+
   padding: 0;
+  margin-bottom: 7px;
 }
 
 .benefits__list-item {
   display: inline-block;
 
+  width: 49%;
   vertical-align: middle;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .benefits__list-item:nth-child(1) .benefits__list-item-icon {
@@ -1153,15 +1159,19 @@ sort_type::-ms-expand {
 }
 
 .benefits__list-item:nth-child(2) .benefits__list-item-icon {
-  background-image: url(../img/eco.svg);
+  background-image: url(../img/cow.svg);
 }
 
 .benefits__list-item:nth-child(3) .benefits__list-item-icon {
-  background-image: url(../img/cow.svg);
+  background-image: url(../img/eco.svg);
 }
 
 .benefits__list-item:nth-child(4) .benefits__list-item-icon {
   background-image: url(../img/thermometer.svg);
+}
+
+.benefits__list-item:nth-child(2n) {
+  padding-left: 22px;
 }
 
 .benefits__list-item-icon {
