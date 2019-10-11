@@ -1415,8 +1415,8 @@ input[type="email"].subscribes__input {
 .pagination__item:active .pagination__link {
   display: inline-block;
 
-  width: 29px;
-  height: 28px;
+  width: 27px;
+  height: 26px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1443,8 +1443,8 @@ input[type="email"].subscribes__input {
 .pagination__link {
   display: inline-block;
 
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 26px;
 
   line-height: 28px;
   font-size: 16px;
