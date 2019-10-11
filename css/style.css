@@ -129,6 +129,8 @@ a:hover {
 
 .header {
   display: inline-block;
+
+  vertical-align: middle;
   width: 100%;
 }
 
@@ -184,12 +186,16 @@ a:hover {
   position: relative;
   display: inline-block;
 
+  vertical-align: middle;
+
   font-size: 16px;
   font-weight: 700;
 }
 
 .header__menu-item:hover .header__menu-inner {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
 .header__menu-inner-item {
@@ -312,6 +318,8 @@ a.header__menu-inner-link--active {
 
 .header__user-buttons-find:hover .header__find-field {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
 .header__find-field {
@@ -334,6 +342,8 @@ a.header__menu-inner-link--active {
 
 .header__user-buttons-enter:hover .header__enter-field, .header__user-buttons-basket:hover .basket-table {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
 .header__enter-field, .basket-table {
@@ -449,6 +459,8 @@ a.header__menu-inner-link--active {
 .enter-field__forgot-password {
   display: inline-block;
 
+  vertical-align: middle;
+
   text-decoration: underline;
   color: #323232;
 }
@@ -534,9 +546,10 @@ a.header__menu-inner-link--active {
 /* Выше стили для шапки */
 
 .contacts {
-  float: right;
-
   display: inline-block;
+
+  vertical-align: middle;
+  float: right;
 
   font-weight: 700;
   line-height: 0;
@@ -619,10 +632,10 @@ a.header__menu-inner-link--active {
 .carousel__slider-buttons label {
   display: inline-block;
 
+  vertical-align: top;
   width: 17px;
   height: 17px;
   margin-right: 8px;
-  vertical-align: top;
 
   background-color: transparent;
   border: 2px solid #ffffff;
@@ -707,6 +720,8 @@ a.header__menu-inner-link--active {
 .gifts-item {
   position: relative;
   display: inline-block;
+
+  vertical-align: top;
 }
 
 .gifts-item img {
@@ -783,12 +798,11 @@ a.header__menu-inner-link--active {
 
   display: inline-block;
 
+  vertical-align: bottom;
   width: 22px;
   height: 22px;
   margin-right: 5px;
   margin-left: 4px;
-
-  vertical-align: bottom;
 
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
@@ -815,11 +829,11 @@ a.header__menu-inner-link--active {
   content: "";
 
   display: inline-block;
+
+  vertical-align: top;
   width: 24px;
   height: 20px;
   margin: 0;
-
-  vertical-align: top;
 
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
@@ -904,6 +918,8 @@ sort_type::-ms-expand {
 
 .form-group {
   display: inline-block;
+
+  vertical-align: middle;
 
   margin-right: 16px;
 }
@@ -991,6 +1007,8 @@ sort_type::-ms-expand {
 
 .catalog-item:hover .catalog-item__hover-button {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
 .catalog-item img {
@@ -1011,6 +1029,7 @@ sort_type::-ms-expand {
 .catalog__item {
   display: inline-block;
 
+  vertical-align: middle;
   margin-top: -43px;
   width: 272px;
   height: 405px;
@@ -1126,8 +1145,9 @@ sort_type::-ms-expand {
 
 .benefits__list-item {
   display: inline-block;
-  margin-bottom: 10px;
+
   vertical-align: middle;
+  margin-bottom: 10px;
 }
 
 .benefits__list-item:nth-child(1) .benefits__list-item-icon {
@@ -1175,6 +1195,8 @@ sort_type::-ms-expand {
 .article {
   position: relative;
   display: inline-block;
+
+  vertical-align: middle;
   width: 560px;
   height: 220px;
 
@@ -1224,6 +1246,8 @@ sort_type::-ms-expand {
   position: relative;
 
   display: inline-block;
+
+  vertical-align: middle;
   width: 549px;
   height: 211px;
 
@@ -1289,6 +1313,7 @@ input[type="email"].subscribes__input {
 .address__text {
   display: inline-block;
 
+  vertical-align: middle;
   margin: 0;
 
   font-size: 14px;
@@ -1367,6 +1392,7 @@ input[type="email"].subscribes__input {
 .footer__about {
   display: inline-block;
 
+  vertical-align: middle;
   padding-left: 0;
   margin: 20px 17px;
 
@@ -1392,6 +1418,8 @@ input[type="email"].subscribes__input {
 
 .footer__about-item--icon {
   display: inline-block;
+
+  vertical-align: middle;
   position: absolute;
   left: -22px;
 
@@ -1421,6 +1449,7 @@ input[type="email"].subscribes__input {
 .pagination__item:active .pagination__link {
   display: inline-block;
 
+  vertical-align: middle;
   width: 27px;
   height: 26px;
 
@@ -1437,6 +1466,8 @@ input[type="email"].subscribes__input {
 
 .pagination__item {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
 .pagination__link:hover {
@@ -1449,6 +1480,7 @@ input[type="email"].subscribes__input {
 .pagination__link {
   display: inline-block;
 
+  vertical-align: middle;
   width: 27px;
   height: 26px;
 
