@@ -281,23 +281,15 @@ a.header__menu-inner-link--active {
 }
 
 .header__user-buttons {
-  display: flex;
-  padding: 5px 10px 9px 21px;
+  padding: 17px 11px 9px 0;
 
+  text-align: right;
   font-size: 14px;
   font-weight: 500;
-  align-items: center;
-}
-
-.header__find-link img {
-  width: 17px;
-  height: 17px;
-  padding: 8px;
-  object-fit: contain;
 }
 
 .header__find-link {
-  display: flex;
+  display: inline-block;
 
   background-color: rgba(255,255,255,.2);
   border-radius: 50px;
@@ -307,22 +299,51 @@ a.header__menu-inner-link--active {
   background-color: #f8f7f4;
 }
 
-.header__user-buttons-find:hover .header__find-item,
-.header__user-buttons-enter:hover .header__enter-item,
-.header__user-buttons-basket:hover .header__basket-item {
-  filter: invert(1);
+.header__find-item,
+.header__enter-item,
+.header__basket-item {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+
+  vertical-align: middle;
+
+  background-size: 21px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.header__user-buttons-find:hover .header__find-item,
-.header__user-buttons-enter:hover .header__enter-item,
-.header__user-buttons-basket:hover .header__basket-item {
-  filter: invert(1);
+.header__find-item {
+  background-size: 17px;
+  background-image: url(../img/loupe.svg);
 }
 
-.header__user-buttons-find:hover .header__find-item,
-.header__user-buttons-enter:hover .header__enter-item,
-.header__user-buttons-basket:hover .header__basket-item {
-  filter: invert(1);
+.header__user-buttons-find:hover .header__find-item {
+  background-image: url(../img/loupe-black.svg);
+}
+
+.header__enter-item {
+  width: 24px;
+  background-position-x: -2px;
+  background-image: url(../img/entrance.svg);
+}
+
+.header__user-buttons-enter:hover .header__enter-item {
+  background-image: url(../img/entrance-black.svg);
+}
+
+.header__basket-item {
+  background-position-y: bottom;
+  height: 20px;
+  background-image: url(../img/basket.svg);
+}
+
+.header__user-buttons-basket:hover .header__basket-item:not(.header__basket-item--full) {
+  background-image: url(../img/basket-black.svg);
+}
+
+.header__basket-item--full {
+  background-image: url(../img/basket-red.svg);
 }
 
 .header__user-buttons-enter:hover .header__enter-link,
@@ -535,8 +556,8 @@ a.header__menu-inner-link--active {
 .header__user-buttons-find,
 .header__user-buttons-enter {
   position: relative;
-
-  padding-right: 8px;
+  margin-right: 5px;
+  display: inline-block;
 }
 
 .header__user-buttons--style {
@@ -552,13 +573,17 @@ a.header__menu-inner-link--active {
 
 .header__basket-link,
 .header__enter-link {
-  padding: 9px 15px;
+  padding: 6px 16px 8px 18px;
 
   color: white;
 
   background-color: rgba(255,255,255,.2);
   border: 1px solid transparent;
   border-radius: 20px;
+}
+
+.header__basket-link {
+  padding: 6px 14px 8px 10px;
 }
 
 .header__user-buttons a {
@@ -569,7 +594,7 @@ a.header__menu-inner-link--active {
 
 .header__user-buttons-basket {
   position: relative;
-
+  display: inline-block;
   margin-right: -9px;
 }
 
