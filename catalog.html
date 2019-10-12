@@ -27,33 +27,33 @@
               </div>
             </li>
             <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="">О Компании</a></li>
           </ul>
         <div class="header__user-buttons">
           <div class="header__user-buttons-find">
             <a class="header__find-link" href="">
-              <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+              <img class="header__find-item" src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
               </a>
               <div class="header__user-buttons--style">
                 <div class="header__find-field">
                   <form>
                     <label class="visually-hidden" for="find-field">Окно поиска</label>
-                    <input type="text" placeholder="Что ищем?" name="find-field" id="find-field">
+                    <input class="input__text input" type="text" placeholder="Что ищем?" name="find-field" id="find-field">
                   </form>
                 </div>
               </div>
           </div>
           <div class="header__user-buttons-enter">
             <a class="header__enter-link" href="">
-                <img src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
+                <img class="header__enter-item" src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
             </a>
             <div class="header__user-buttons--style">
               <div class="header__enter-field">
                   <form>
                       <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                      <input type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
+                      <input class="input__email input" type="email" placeholder="Электронная почта" name="user-email" id="user-email" required>
                       <label class="visually-hidden" for="user-password">Пароль для авторизации</label>
-                      <input type="password" placeholder="Пароль" name="user-password" id="user-password" required>
+                      <input class="input__password input" type="password" placeholder="Пароль" name="user-password" id="user-password" required>
                       <div class="enter-field__submit">
                           <button class="enter-field__button button" type="submit">Войти</button>
                           <div class="enter-field__forgot-password">
@@ -65,9 +65,9 @@
               </div>
             </div>
           </div>
-          <div class="header__user-buttons-basket">
-            <a class="header__basket-link header__basket-link-full" href="">
-              <img src="img/basket-red.svg" width="21" height="20" alt="Корзина"> 2 товара
+          <div class="header__user-buttons-basket header__user-buttons-basket--full">
+            <a class="header__basket-link" href="">
+              <img class="header__basket-item-full" src="img/basket-red.svg" width="21" height="20" alt="Корзина"> 2 товара
             </a>
             <div class="header__user-buttons--style">
               <div class="basket-table">
@@ -140,10 +140,10 @@
           <div class="form-group catalog-fat">
               <label>Жирность:</label>
               <div class="form-group-style">
-                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat1"><label for="fat1"> 0%</label>
-                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat2" checked><label for="fat2"> до 10%</label>
-                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat3"><label for="fat3"> до 30%</label>
-                <input class="visually-hidden form-group__fat-radio" type="radio" name="fat" id="fat4"><label for="fat4"> выше 30%</label>
+                <input class="visually-hidden form-group__fat-radio input__radio input" type="radio" name="fat" id="fat1"><label for="fat1"> 0%</label>
+                <input class="visually-hidden form-group__fat-radio input__radio input" type="radio" name="fat" id="fat2" checked><label for="fat2"> до 10%</label>
+                <input class="visually-hidden form-group__fat-radio input__radio input" type="radio" name="fat" id="fat3"><label for="fat3"> до 30%</label>
+                <input class="visually-hidden form-group__fat-radio input__radio input" type="radio" name="fat" id="fat4"><label for="fat4"> выше 30%</label>
               </div>
           </div>
         </div>
@@ -151,11 +151,11 @@
           <div class="form-group catalog-filler">
               <label class="group-name">Наполнитель:</label>
               <div class="form-group-style">
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler1" id="filler1" checked><label for="filler1"> шоколадные</label>
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler2" id="filler2" checked><label for="filler2"> сахарные присыпки</label>
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler3" id="filler3"><label for="filler3"> фрукты</label>
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler4" id="filler4"><label for="filler4"> сиропы</label>
-                <input class="visually-hidden form-group__filler-checkbox" type="checkbox" name="filler5" id="filler5"><label for="filler5"> джемы</label>
+                <input class="visually-hidden form-group__filler-checkbox input__checkbox input" type="checkbox" name="filler1" id="filler1" checked><label for="filler1"> шоколадные</label>
+                <input class="visually-hidden form-group__filler-checkbox input__checkbox input" type="checkbox" name="filler2" id="filler2" checked><label for="filler2"> сахарные присыпки</label>
+                <input class="visually-hidden form-group__filler-checkbox input__checkbox input" type="checkbox" name="filler3" id="filler3"><label for="filler3"> фрукты</label>
+                <input class="visually-hidden form-group__filler-checkbox input__checkbox input" type="checkbox" name="filler4" id="filler4"><label for="filler4"> сиропы</label>
+                <input class="visually-hidden form-group__filler-checkbox input__checkbox input" type="checkbox" name="filler5" id="filler5"><label for="filler5"> джемы</label>
               </div>
           </div>
           <button class="form-group-button">Применить</button>
@@ -307,16 +307,16 @@
             </li>
           </ul>
       <ul class="pagination">
-        <li class="pagination__item"><a class="pagination__link" href="">&lt;</a></li>
+        <li class="pagination__item"><a class="pagination__link" href=""></a></li>
         <li class="pagination__item"><a class="pagination__link pagination__link--active" href="">1</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">4</a></li>
         <li class="pagination__item"><a class="pagination__link" href="">5</a></li>
-        <li class="pagination__item"><a class="pagination__link" href="">&gt;</a></li>
+        <li class="pagination__item"><a class="pagination__link" href=""></a></li>
       </ul>
     </main>
-    <footer class="footer">
+    <footer class="footer footer__catalog--style">
         <h5 class="visually-hidden">Наши аккаунты в соцсетях</h5>
         <ul class="social-links">
           <li class="social-links__item">
@@ -336,7 +336,6 @@
           <h5 class="visually-hidden">О нас</h5>
           <ul class="footer__about">
             <li class="footer__about-item">
-              <i class="footer__about-item--icon"></i>
               <a class="footer__about-link footer__about-link--bold" href="">Для поставщиков</a>
             </li>
             <li class="footer__about-item"><a class="footer__about-link" href="">О производстве</a>

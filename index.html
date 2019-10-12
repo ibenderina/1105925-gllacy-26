@@ -24,33 +24,33 @@
               </div>
             </li>
             <li class="header__menu-item"><a class="header__menu-link" href="">Доставка и оплата</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="">О компании</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="">О Компании</a></li>
           </ul>
           <div class="header__user-buttons">
             <div class="header__user-buttons-find">
               <a class="header__find-link" href="">
-                <img src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
+                <img class="header__find-item" src="img/loupe.svg" width="17" height="17" alt="Окно поиска">
               </a>
               <div class="header__user-buttons--style">
                 <div class="header__find-field">
                   <form>
                     <label class="visually-hidden" for="find-field">Окно поиска</label>
-                    <input type="text" name="find-field" id="find-field" placeholder="Что ищем?">
+                    <input class="input__text input" type="text" name="find-field" id="find-field" placeholder="Что ищем?">
                   </form>
                 </div>
               </div>
             </div>
             <div class="header__user-buttons-enter">
               <a class="header__enter-link" href="">
-                  <img src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
+                  <img class="header__enter-item" src="img/entrance.svg" width="21" height="19" alt="Авторизация"> Вход
               </a>
               <div class="header__user-buttons--style">
                 <div class="header__enter-field">
                     <form>
                         <label class="visually-hidden" for="user-email">Электронная почта пользователя</label>
-                        <input type="email" name="user-email" id="user-email" placeholder="Электронная почта" required>
+                        <input class="input__email input" type="email" name="user-email" id="user-email" placeholder="Электронная почта" required>
                         <label class="visually-hidden" for="user-password">Пароль для авторизации</label>
-                        <input type="password" name="user-password" id="user-password" placeholder="Пароль" required>
+                        <input class="input__password input" type="password" name="user-password" id="user-password" placeholder="Пароль" required>
                         <div class="enter-field__submit">
                             <button class="enter-field__button button" type="submit">Войти</button>
                             <div class="enter-field__forgot-password">
@@ -64,7 +64,7 @@
             </div>
             <div class="header__user-buttons-basket">
               <a class="header__basket-link" href="">
-                <img src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
+                <img class="header__basket-item" src="img/basket.svg" width="21" height="20" alt="Корзина"> Пусто
               </a>
             </div>
           </div>
@@ -85,11 +85,11 @@
           <form>
             <p class="call-back__text">Мы обязательно вам ответим!</p>
             <label class="visually-hidden" for="username">Введите имя</label>
-            <input class="call-back__input" type="text" name="username" id="username" placeholder="Как вас зовут?" required>
+            <input class="call-back__input input" type="text" name="username" id="username" placeholder="Как вас зовут?" required>
             <label class="visually-hidden" for="usermail">Введите электронную почту</label>
-            <input class="call-back__input" type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?"  required>
+            <input class="call-back__input input" type="email" name="usermail" id="usermail" placeholder="Ваша почта для ответа?"  required>
             <label class="visually-hidden" for="message">Напишите что-нибудь...</label>
-            <textarea class="call-back__textarea" rows="7" name="message" id="message" placeholder="Напишите что-нибудь..."></textarea>
+            <textarea class="call-back__textarea textarea" rows="7" name="message" id="message" placeholder="Напишите что-нибудь..."></textarea>
             <div class="text-align-right">
               <button class="call-back__button button" type="submit">Отправить</button>
             </div>
@@ -105,19 +105,19 @@
     <main class="main">
         <h1 class="visually-hidden">Интернет-магазин мороженого</h1>
         <div class="carousel">
-          <input class="product-1 visually-hidden" type="radio" id="product-1" name="toggle" checked>
+          <input class="product-1 visually-hidden input__radio input" type="radio" id="product-1" name="toggle" checked>
           <div class="carousel__slide">
             <img src="img/carousel__1.png" height="584" alt="Фото мороженки">
             <h2>Крем-брюле и пломбир<br>с малиновым джемом</h2>
             <a class="full-basket button" href="">Давайте оба!</a>
           </div>
-          <input class="product-2 visually-hidden" type="radio" id="product-2" name="toggle">
+          <input class="product-2 visually-hidden input__radio input" type="radio" id="product-2" name="toggle">
           <div class="carousel__slide">
             <img src="img/carousel__2.png" height="584" alt="Фото мороженки">
             <h2>Шоколадный пломбир и<br>лимонный сорбет</h2>
             <a class="full-basket button" href="">Давайте оба!</a>
           </div>
-          <input class="product-3 visually-hidden" type="radio" id="product-3" name="toggle">
+          <input class="product-3 visually-hidden input__radio input" type="radio" id="product-3" name="toggle">
           <div class="carousel__slide">
             <img src="img/carousel__3.png" height="584" alt="Фото мороженки">
             <h2>Пломбир с помадкой и<br>клубничный щербет</h2>
@@ -275,18 +275,20 @@
       </div>
       <h4 class="visually-hidden">Форма подписки</h4>
       <div class="subscribes">
-        <p class="subscribes__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-        </p>
-        <form class="subscribes__form">
-          <label class="visually-hidden" for="subscribes-email">Введите электронную почту для подписки на рассылку</label>
-          <input class="subscribes__input" type="email" placeholder="Электронная почта" name="subscribes-email" id="subscribes-email">
-          <button class="subscribes__button button">Отправить</button>
-        </form>
+        <div class="subscribes__wrapper">
+          <p class="subscribes__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+          </p>
+          <form class="subscribes__form">
+            <label class="visually-hidden" for="subscribes-email">Введите электронную почту для подписки на рассылку</label>
+            <input class="subscribes__input input__email input" type="email" placeholder="Электронная почта" name="subscribes-email" id="subscribes-email">
+            <button class="subscribes__button button">Отправить</button>
+          </form>
+        </div>
       </div>
     </section>
     <section class="map">
       <h4 class="visually-hidden">Как к нам доехать</h4>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen=""></iframe>
+      <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen=""></iframe>
       <div class="address">
         <p class="address__text">Адрес главного офиса<br>и офлайн-магазина:</p>
         <p class="address__text address__text--bold address__text--br">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
@@ -318,7 +320,6 @@
         <div>
           <ul class="footer__about">
             <li class="footer__about-item">
-              <i class="footer__about-item--icon"></i>
               <a class="footer__about-link footer__about-link--bold" href="">Для поставщиков</a>
             </li>
             <li class="footer__about-item"><a class="footer__about-link" href="">О производстве</a>
