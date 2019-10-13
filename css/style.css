@@ -205,7 +205,7 @@ a:hover {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .header__logo-item {
@@ -1237,7 +1237,7 @@ a.header__menu-inner-link--active {
 
 .catalog__item-popular {
   position: absolute;
-  left: 2px;
+  left: 13px;
 
   width: 61px;
   height: 61px;
@@ -1253,8 +1253,9 @@ a.header__menu-inner-link--active {
   display: inline-block;
   vertical-align: middle;
   margin-top: -44px;
-  width: 272px;
-  min-height: 405px;
+  padding-top: 6px;
+  width: 293px;
+  min-height: 398px;
 
   text-align: center;
   color: #ffffff;
@@ -1262,6 +1263,7 @@ a.header__menu-inner-link--active {
 
 .catalog-item-cost {
   margin-top: -65px;
+  margin-left: 11px;
 
   text-align: left;
 }
@@ -1285,7 +1287,7 @@ a.header__menu-inner-link--active {
 
 .catalog-item__title {
   margin-top: 20px;
-  padding: 3px 8px;
+  padding: 2px 18px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1301,11 +1303,11 @@ a.header__menu-inner-link--active {
   -ms-flex-wrap: wrap;
 
       flex-wrap: wrap;
-  margin: 2px -5px 5px -1px;
+  margin: -6px -13px 12px -14px;
   padding: 44px 0 0 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .breadcrumbs {
