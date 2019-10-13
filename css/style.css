@@ -44,7 +44,6 @@ body {
   color: #fefefe;
 
   -webkit-box-shadow: 0 1px 2px 0 #ac1000;
-
           box-shadow: 0 1px 2px 0 #ac1000;
   background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
@@ -897,11 +896,25 @@ a.header__menu-inner-link--active {
   position: relative;
   display: inline-block;
 
+  width: 560px;
+  height: 229px;
+
   vertical-align: top;
+
+  border-radius: 15px;
+}
+
+.gifts-item--berry {
+  background-color: #780e2b;
+}
+
+.gifts-item--choco {
+  background-color: #3c1f1a;
 }
 
 .gifts-item img {
   border-radius: 15px;
+  color: #ffffff;
 }
 
 .gifts-item__content {
@@ -1066,6 +1079,10 @@ a.header__menu-inner-link--active {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  }
+
+  .sort_type option {
+    color: #000000;
   }
 
 .sort_type:hover {
@@ -1237,7 +1254,7 @@ a.header__menu-inner-link--active {
   vertical-align: middle;
   margin-top: -44px;
   width: 272px;
-  height: 405px;
+  min-height: 405px;
 
   text-align: center;
   color: #ffffff;
@@ -1333,6 +1350,7 @@ a.header__menu-inner-link--active {
   color: #323232;
 
   background-image: url(../img/benefits__background.jpeg);
+  background-color: #efe3cc;
   border: 1px solid #979797;
   border-radius: 15px;
 }
@@ -1426,6 +1444,7 @@ a.header__menu-inner-link--active {
   overflow: hidden;
 
   background-image: url(../img/articles__background.jpeg);
+  background-color: #ffffff;
   background-position: 18% 39%;
   background-origin: border-box;
   border-radius: 15px;
@@ -1927,7 +1946,7 @@ input[type="email"].subscribes__input {
           animation: shudder 0.4s;
 }
 
-.call-back__delete-link {
+.call-back__delete-button {
   display: block;
   position: absolute;
   right: 27px;
@@ -1935,8 +1954,10 @@ input[type="email"].subscribes__input {
   width: 18px;
   height: 17px;
 
-  background-image: url(../img/call-back__delete-link.svg);
+  border: none;
+  background-image: url(../img/call-back__delete-button.svg);
   background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .call-back__text {
