@@ -1255,13 +1255,13 @@ a.header__menu-inner-link--active {
   position: relative;
 
   display: inline-block;
-  vertical-align: middle;
   margin-top: -44px;
   padding-top: 6px;
   width: 293px;
   min-height: 398px;
 
   text-align: center;
+  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -1314,7 +1314,7 @@ a.header__menu-inner-link--active {
   padding: 44px 0 0 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .breadcrumbs {
@@ -1616,7 +1616,7 @@ input[type="email"].subscribes__input {
 .address .address__button {
   display: block;
 
-  margin-top: 25px;
+  margin-top: 23px;
   padding: 13px 26px;
 
   line-height: 18px;
@@ -1729,7 +1729,7 @@ input[type="email"].subscribes__input {
 
 .pagination {
   text-align: right;
-  margin: -7px -14px 30px 6px;
+  margin: -4px -14px 29px 6px;
 }
 
 .pagination__link--active,
