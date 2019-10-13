@@ -721,7 +721,7 @@ a.header__menu-inner-link--active {
 /* Выше блок с контактами */
 
 .carousel {
-  padding: 85px 0;
+  padding: 89px 0 66px 0;
   margin-top: -183px;
 
   text-align: center;
@@ -749,8 +749,8 @@ a.header__menu-inner-link--active {
 }
 
 .carousel__slide h2 {
-  margin-top: -273px;
-  margin-bottom: 42px;
+  margin-top: -278px;
+  margin-bottom: 43px;
 
   font-weight: 700;
   font-size: 60px;
@@ -775,7 +775,7 @@ a.header__menu-inner-link--active {
 .carousel__slider-buttons {
   position: absolute;
 
-  bottom: 79px;
+  bottom: 83px;
   left: 0;
 
   font-size: 0;
@@ -881,6 +881,7 @@ a.header__menu-inner-link--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
 
   -webkit-box-pack: justify;
 
@@ -898,6 +899,7 @@ a.header__menu-inner-link--active {
 
   width: 560px;
   height: 229px;
+  margin-top: 15px;
 
   vertical-align: top;
 
@@ -923,7 +925,9 @@ a.header__menu-inner-link--active {
   top: -3px;
 
   margin: 20px;
+  max-height: 120px;
 
+  overflow: hidden;
   font-weight: 700;
   font-size: 18px;
   color: #FFFFFF;
@@ -1289,6 +1293,9 @@ a.header__menu-inner-link--active {
   margin-top: 20px;
   padding: 2px 18px;
 
+  overflow: hidden;
+  height: 44px;
+
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -1346,7 +1353,7 @@ a.header__menu-inner-link--active {
   display: block;
 
   padding: 4px 20px 10px;
-  margin: -49px 0 0 0;
+  margin: -49px 0 -14px 0;
 
   color: #323232;
 
@@ -1429,6 +1436,7 @@ a.header__menu-inner-link--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1439,9 +1447,11 @@ a.header__menu-inner-link--active {
   position: relative;
   display: inline-block;
 
-  vertical-align: top;
   width: 560px;
   min-height: 220px;
+  margin-top: 15px;
+
+  vertical-align: top;
   overflow: hidden;
 
   background-image: url(../img/articles__background.jpeg);
@@ -1495,7 +1505,8 @@ a.header__menu-inner-link--active {
 
   vertical-align: top;
   width: 560px;
-  height: auto;
+  min-height: 220px;
+  margin-top: 15px;
 
   background-color: #F8F7F4;
   border-radius: 15px;
@@ -1516,7 +1527,7 @@ a.header__menu-inner-link--active {
 }
 
 .subscribes__text {
-  height: 61px;
+  height: 65px;
   margin: 30px 21px;
   overflow: hidden;
 
@@ -1529,7 +1540,7 @@ a.header__menu-inner-link--active {
 .subscribes__form {
   display: block;
 
-  margin: 40px 3px 16px 21px;
+  margin: 36px 3px 16px 21px;
 }
 
 input[type="email"].subscribes__input {
