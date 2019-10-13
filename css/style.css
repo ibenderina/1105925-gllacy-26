@@ -881,7 +881,8 @@ a.header__menu-inner-link--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   -webkit-box-pack: justify;
 
@@ -1225,14 +1226,14 @@ a.header__menu-inner-link--active {
 }
 
 .catalog-item__hover-button {
-  display: none;
+  display: inline-block;
+  vertical-align: middle;
+  visibility: hidden;
   padding: 13px 17px;
 }
 
 .catalog-item:hover .catalog-item__hover-button {
-  display: inline-block;
-
-  vertical-align: middle;
+  visibility: visible;
 }
 
 .catalog-item img {
@@ -1256,9 +1257,11 @@ a.header__menu-inner-link--active {
 
   display: inline-block;
   margin-top: -44px;
+  margin-bottom: 5px;
   padding-top: 6px;
+  padding-bottom: 6px;
   width: 293px;
-  min-height: 398px;
+  max-height: 650px;
 
   text-align: center;
   vertical-align: middle;
@@ -1294,7 +1297,7 @@ a.header__menu-inner-link--active {
   padding: 2px 18px;
 
   overflow: hidden;
-  height: 44px;
+  max-height: 244px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1436,7 +1439,8 @@ a.header__menu-inner-link--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
