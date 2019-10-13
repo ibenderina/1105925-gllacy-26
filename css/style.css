@@ -943,7 +943,7 @@ a.header__menu-inner-link--active {
 .gifts-item__link {
   position: absolute;
   right: 22px;
-  bottom: 28px;
+  bottom: 23px;
 
   display: -webkit-box;
 
@@ -1302,8 +1302,7 @@ a.header__menu-inner-link--active {
 
       flex-wrap: wrap;
   margin: 2px -5px 5px -1px;
-  /* margin: 0px -5px 12px -2px; */
-  padding: 40px 0 0 0;
+  padding: 44px 0 0 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1717,7 +1716,7 @@ input[type="email"].subscribes__input {
 
 .pagination {
   text-align: right;
-  margin: -3px -12px 30px 6px;
+  margin: -7px -14px 30px 6px;
 }
 
 .pagination__link--active,
