@@ -18,7 +18,7 @@ body {
   height: 430px;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden,
 .input__checkbox.visually-hidden,
 .input__radio.visually-hidden {
   position: absolute;
@@ -280,6 +280,8 @@ a:hover {
 .header__menu-inner-link {
   display: block;
   padding: 7px 20px;
+
+  text-decoration: none;
 }
 
 .header__menu-inner {
@@ -494,6 +496,10 @@ a.header__menu-inner-link--active {
   padding: 13px 15px;
 }
 
+.basket-table__product-image img {
+  border-radius: 100px;
+}
+
 .basket-table__product-name,
 .basket-table__product-cost,
 .basket-table__product-weight {
@@ -603,16 +609,17 @@ a.header__menu-inner-link--active {
 
 .enter-field__forgot-password a {
   display: block;
+
+  text-decoration: underline;
 }
 
 .enter-field__password-reminder:hover,
-.enter-field__new-user:hover {
-  color: #ffbc9e;
-}
-
+.enter-field__new-user:hover,
 .enter-field__password-reminder:active,
 .enter-field__new-user:active {
   color: #ffbc9e;
+  -webkit-text-decoration: underline #ffbc9e;
+          text-decoration: underline #ffbc9e;
 }
 
 .enter-field__new-user {
@@ -669,7 +676,9 @@ a.header__menu-inner-link--active {
   padding: 6px 14px 8px 10px;
 }
 
-.header__user-buttons a {
+.header__user-buttons-find > a,
+.header__user-buttons-enter > a,
+.header__user-buttons-basket > a {
   white-space: nowrap;
 
   text-decoration: none;
@@ -909,10 +918,12 @@ a.header__menu-inner-link--active {
 
 .gifts-item--berry {
   background-color: #780e2b;
+  background-image: url(../img/gifts-item__background--berry.jpeg);
 }
 
 .gifts-item--choco {
   background-color: #3c1f1a;
+  background-image: url(../img/gifts-item__background--choco.jpeg);
 }
 
 .gifts-item img {
@@ -1084,11 +1095,11 @@ a.header__menu-inner-link--active {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  }
+}
 
-  .sort_type option {
+.sort_type option {
     color: #000000;
-  }
+}
 
 .sort_type:hover {
   -webkit-filter: invert(1);
@@ -1480,6 +1491,7 @@ a.header__menu-inner-link--active {
 .article__rubric {
   font-size: 16px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .article__rubric:hover {
